@@ -1,7 +1,7 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Project\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,36 +14,20 @@ use App\Http\Controllers\Project\ProjectController;
 |
 */
 
-
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
 
-Route::get('/about', [ProjectController::class, 'Index']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 
+require __DIR__.'/auth.php';
 
 
-Route::get('/construction', function () {
-    return view('construction');
-});
-
-Route::get('/service', function () {
-    return view('service');
-});
-
-Route::get('/modelhouse', function () {
-    return view('modelhouse');
-});
-
-Route::get('/estimate', function () {
-    return view('estimate');
-});
-
-Route::get('/recruitment', function () {
-    return view('recruitment');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

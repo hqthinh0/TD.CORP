@@ -7,8 +7,13 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
-    public function Index(){
+    public function aboutController(){
          return view('about');
+
+    } // end mehtod
+
+    public function contactController(){
+         return view('contact');
 
     } // end mehtod
 }
