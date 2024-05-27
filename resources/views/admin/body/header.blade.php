@@ -12,10 +12,10 @@
         </button>
         </div>
     <div>
-      <a class="navbar-brand brand-logo" href="../index.html">
+      <a class="navbar-brand brand-logo" href="/dashboard">
         <img src="{{ asset('backend/assets/images/logo.svg')}}" alt="logo" />
       </a>
-      <a class="navbar-brand brand-logo-mini" href="../index.html">
+      <a class="navbar-brand brand-logo-mini" href="/dashboard">
         <img src="{{ asset('backend/assets/images/logo-mini.svg')}}" alt="logo" />
       </a>
     </div>
@@ -118,7 +118,8 @@
 
       <li class="nav-item dropdown d-none d-lg-block user-dropdown">
         <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-          <img class="img-xs rounded-circle" src="{{ (!empty($adminData->profile_image)) ? url('img/admin_image/'.$adminData->profile_image):url(img/user.png)}}" alt="Profile image"> </a>
+          <img class="img-xs rounded-circle" src="{{ (!empty($adminData->profile_image)) ? url('img/admin_image/'.$adminData->profile_image):url('img/user.png')}}" alt="Profile image" />
+         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
           <div class="dropdown-header text-center">
           
