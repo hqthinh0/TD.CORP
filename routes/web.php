@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Project\ProjectController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Construction\ConsTrucTionController;
+use App\Http\Controllers\SliderShow\SlideShowController;
+use App\Http\Controllers\CustomerReview\CustomerReviewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,6 +41,34 @@ Route::controller(AdminController::class)->group(function(){
     Route::get('/change/password', 'ChangePassword')->name('change.password');
     Route::post('/update/password', 'UpdatePassword')->name('update.password');
     
+});
+
+//ConsTrucTionController
+Route::controller(ConsTrucTionController::class)->group(function(){
+    Route::get('/construction', 'CategoryConsTruction')->name('construction.route');
+    Route::post('/update/construction', 'UpdateConstruction')->name('update.construction');
+});
+
+
+//SlideShowController
+Route::controller(SlideShowController::class)->group(function(){
+    Route::get('/category/slideshow', 'SliderShow')->name('slideshow.route');
+    Route::post('/store/slideshow', 'StoreSliderShow')->name('slideshow.store');
+    Route::get('/all/slideshow', 'SliderShowAll')->name('slideshow.route.all');
+    Route::get('/Edit/slideshow/{id}', 'SliderShowEdit')->name('slideshow.route.edit');
+    Route::post('/update/slideshow', 'UpdateSliderShow')->name('slideshow.route.update');
+    Route::get('/Delete/slideshow/{id}', 'SliderShowDelete')->name('slideshow.route.delete');
+});
+
+//CustomerReviewController
+Route::controller(CustomerReviewController::class)->group(function(){
+
+    Route::get('/customerreview', 'CustomerReview')->name('customerreview.route');
+    Route::post('/update/customerreview', 'UpdateCustomerReview')->name('route.CustomerReview.update');
+    Route::get('/all/customerreview', 'CustomerReviewAll')->name('route.CustomerReview.all');
+    Route::get('/edit/customerreview/{id}', 'CustomerReviewEdit')->name('CustomerReview.route.edit');
+    Route::get('/Delete/customerreview/{id}', 'CustomerReviewDelete')->name('CustomerReview.route.delete');
+     Route::post('/editupdate/customerreview', 'UpdateEditCustomerReview')->name('CustomerReview.route.updateedit');
 });
 
 

@@ -1,30 +1,21 @@
 @extends('frontend.main_master')
 @section('main')
 
+@php
+  $SliderShow = App\Models\SliderShow::all();
+   $CustomReview = App\Models\CustomerReview::all();
+@endphp
 
 <div id="l-main">
 	<section class="slide-banner">
 		<div class="slider">
-			<div class="slider__nav slick-slider ">
-				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset('frontend/assets/images/slider/pct_images_01.jpg')}}" />
-				</figure>
-			</div>
+				@foreach($SliderShow as $item)
 			<div class="slider__nav slick-slider">
 				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset('frontend/assets/images/slider/pct_images_02.jpg')}}" />
+					<img class="slider__bg--img fluid-image" src="{{ asset('$item->multi_Images')}}" />
 				</figure>
 			</div>
-			<div class="slider__nav slick-slider">
-				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset('frontend/assets/images/slider/pct_images_03.jpg')}}" />
-				</figure>
-			</div>
-			<div class="slider__nav slick-slider">
-				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset('frontend/assets/images/slider/pct_images_04.jpg')}}" />
-				</figure>
-			</div>
+			@endforeach
 		</div>
 	</section>    
 
@@ -236,48 +227,22 @@
 		<div class="wrp-container">
 			<h2 class="hdg-lv2 hdg-lv2--center"> <span class="color-primary">đánh giá của khách hàng</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box feedback">
+				@foreach($CustomReview as $item)
 				<div class="box__item ">
-					<p class="txt-lead">Cảm thấy nhà đẹp thật sự  từ thiết kế, thi công sạch sẽ và thi công đúng với bản vẽ, anh chủ cũng vui tính, chúc quý công ty sẽ gặt nhiều thành công!</p>
+					<p class="txt-lead">{{$item->description}}</p>
 					<div class="box__info">
 						<div class="grid-row feedback--grid">
 							<div class="box__info--images">
-								<img src="{{ asset('frontend/assets/images/feedback/customer_pct-01.png')}}"  alt="">
+								<img src="{{ asset($item->customer_img)}}"  alt="">
 							</div>
 							<div class="box__info--content">
-								<p class="box__info--name">Thành Diện</p>
-								<p class="box__info--adress">Thôn Tân Tiến, Krông pắk, dak lak</p>
+								<p class="box__info--name">{{$item->name}}</p>
+								<p class="box__info--adress">T{{$item->address}}</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="box__item ">
-					<p class="txt-lead">Cảm thấy nhà đẹp thật sự  từ thiết kế, thi công sạch sẽ và thi công đúng với bản vẽ, anh chủ cũng vui tính, chúc quý công ty sẽ gặt nhiều thành công!</p>
-					<div class="box__info">
-						<div class="grid-row feedback--grid">
-							<div class="box__info--images">
-								<img src="{{ asset('frontend/assets/images/feedback/customer_pct-01.png')}}"  alt="">
-							</div>
-							<div class="box__info--content">
-								<p class="box__info--name">Thành Diện</p>
-								<p class="box__info--adress">Thôn Tân Tiến, Krông pắk, dak lak</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="box__item ">
-					<p class="txt-lead">Cảm thấy nhà đẹp thật sự  từ thiết kế, thi công sạch sẽ và thi công đúng với bản vẽ, anh chủ cũng vui tính, chúc quý công ty sẽ gặt nhiều thành công!</p>
-					<div class="box__info">
-						<div class="grid-row feedback--grid">
-							<div class="box__info--images">
-								<img src="{{ asset('frontend/assets/images/feedback/customer_pct-01.png')}}" alt="">
-							</div>
-							<div class="box__info--content">
-								<p class="box__info--name">Thành Diện</p>
-								<p class="box__info--adress">Thôn Tân Tiến, Krông pắk, dak lak</p>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</section>

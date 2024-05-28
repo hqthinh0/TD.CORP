@@ -9,38 +9,31 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Edit Profile Page </h4>
+            <h4 class="card-title">Add New Construction</h4>
 
-            <form  method="post" action="{{ route('store.profile') }}" enctype="multipart/form-data" >
+            <form  method="post" action="{{ route('update.construction') }}" enctype="multipart/form-data" >
                 @csrf
-            
+
+            <input type="hidden" name="id" value="{{$cat->id}}">
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Name</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Title Construstion</label>
                 <div class="col-sm-10">
-                    <input name="name" class="form-control" type="text" value="{{ $editData->name }}"  id="example-text-input">
+                    <input name="title_construction" class="form-control" type="text" value="" placeholder="{{$cat->title_construction}}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">UserName</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">URL Construstion</label>
                 <div class="col-sm-10">
-                    <input name="username" class="form-control" type="text" value="{{ $editData->username }}"  id="example-text-input">
+                    <input name="url_construction" class="form-control" type="text" value="" placeholder="{{$cat->url_construction}}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
-             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">User Email</label>
-                <div class="col-sm-10">
-                    <input name="email" class="form-control" type="text" value="{{ $editData->email }}"  id="example-text-input">
-                </div>
-            </div>
-
-
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Profile Image </label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Image Construstion</label>
                 <div class="col-sm-10">
-                  <input name="profile_image" class="form-control" type="file"  id="image">
+                  <input name="images_construction" class="form-control" type="file"  id="image">
                 </div>
             </div>
             <!-- end row -->
@@ -48,7 +41,8 @@
               <div class="row mb-3">
                  <label for="example-text-input" class="col-sm-2 col-form-label">  </label>
                 <div class="col-sm-10">
-                       <img id="showImage" style="width: 300px; height: auto;" class="rounded avatar-lg" src="{{ (!empty($editData->profile_image)) ? url('img/admin_image/'.$editData->profile_image): url('img/no_image.jpg') }}" alt="Card image cap">
+                       <img id="showImage" style="width: 300px; height: auto;" class="rounded avatar-lg" src="{{ (!empty($cat->images_construction)) ? url('img/construction/'.$cat->images_construction) : url('img/no_image.jpg') }}" alt="Card image cap">
+                    <!-- <img id="showImage" style="width: 100px; height:100px" class="rounded avatar-lg" src="{{ asset('backend/assets/images/small/img-5.jpg') }}" alt="Card image cap"> -->
                 </div>
             </div>
             <!-- end row -->
