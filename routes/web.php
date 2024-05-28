@@ -67,8 +67,9 @@ Route::controller(CustomerReviewController::class)->group(function(){
     Route::post('/update/customerreview', 'UpdateCustomerReview')->name('route.CustomerReview.update');
     Route::get('/all/customerreview', 'CustomerReviewAll')->name('route.CustomerReview.all');
     Route::get('/edit/customerreview/{id}', 'CustomerReviewEdit')->name('CustomerReview.route.edit');
+    Route::post('/editupdate/customerreview', 'UpdateEditCustomerReview')->name('CustomerReview.route.updateedit');
     Route::get('/Delete/customerreview/{id}', 'CustomerReviewDelete')->name('CustomerReview.route.delete');
-     Route::post('/editupdate/customerreview', 'UpdateEditCustomerReview')->name('CustomerReview.route.updateedit');
+   
 });
 
 
