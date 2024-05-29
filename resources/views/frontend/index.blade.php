@@ -3,7 +3,8 @@
 
 @php
   $SliderShow = App\Models\SliderShow::all();
-   $CustomReview = App\Models\CustomerReview::all();
+  $CustomReview = App\Models\CustomerReview::all();
+  $partner = App\Models\partner::all();
 @endphp
 
 <div id="l-main">
@@ -12,7 +13,7 @@
 				@foreach($SliderShow as $item)
 			<div class="slider__nav slick-slider">
 				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset('$item->multi_Images')}}" />
+					<img class="slider__bg--img fluid-image" src="{{ asset($item->multi_Images)}}" />
 				</figure>
 			</div>
 			@endforeach
@@ -251,36 +252,14 @@
 		<div class="wrp-container">
 			<h2 class="hdg-lv2 hdg-lv2--center"> <span class="color-primary">Đối tác của chúng tôi</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box business grid-row ">
+				
+				@foreach($partner as $item)
 				<div class="box__item">
 					<div class="box__item--img">
-						<img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
+						<img src="{{ asset($item->partners_Images) }}"  alt="" class=fluid-image>
 					</div>
 				</div>
-				<div class="box__item">
-						<div class="box__item--img">
-					<img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
-					</div>
-				</div>
-				<div class="box__item">
-					<div class="box__item--img">
-					    <img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
-					</div>
-				</div>
-				<div class="box__item">
-					<div class="box__item--img">
-						<img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
-					</div>
-				</div>
-				<div class="box__item">
-					<div class="box__item--img">
-						<img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
-					</div>
-				</div>
-				<div class="box__item">
-					<div class="box__item--img">
-						<img src="{{ asset('frontend/assets/images/business/business_02.png')}}"  alt="" class=fluid-image>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</section>

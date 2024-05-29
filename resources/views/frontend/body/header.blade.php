@@ -22,7 +22,7 @@
 								<a href="./" class="nav-item">Trang Chủ</a>
 							</li>
 							<li class="">
-								<a href="./company/" class="nav-item">Giới thiệu</a>
+								<a href="{{ route('about.page.company') }}" class="nav-item">Giới thiệu</a>
 							</li>
 							<li class="">
 								<a href="./construction/" class="nav-item">Thi công</a>

@@ -1,7 +1,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
   <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link" href="../index.html">
+      <a class="nav-link" href="/">
         <i class="mdi mdi-grid-large menu-icon"></i>
         <span class="menu-title">Dashboard</span>
       </a>
@@ -69,6 +69,39 @@
       </div>
     </li>
    <!-- CustomerReview End -->
+
+      <!-- partners start -->
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#partners" aria-expanded="false"
+        aria-controls="partners">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">partners</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="partners">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('partner.route')}}">partners</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('partner.route.all')}}">all</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#About" aria-expanded="false"
+        aria-controls="About">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">About Page Setup</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="About">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('about.page')}}">About Page</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('about.page.all')}}">all</a></li>
+        </ul>
+      </div>
+    </li>
+   <!-- partners End -->
+
+
      <!-- Construction END -->
     <!-- <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">

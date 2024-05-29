@@ -7,6 +7,9 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Construction\ConsTrucTionController;
 use App\Http\Controllers\SliderShow\SlideShowController;
 use App\Http\Controllers\CustomerReview\CustomerReviewController;
+use App\Http\Controllers\Partner\PartnerController;
+use App\Http\Controllers\About\AboutController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,14 +48,14 @@ Route::controller(AdminController::class)->group(function(){
 
 //ConsTrucTionController
 Route::controller(ConsTrucTionController::class)->group(function(){
-    Route::get('/construction', 'CategoryConsTruction')->name('construction.route');
+    Route::get('/abc/construction', 'CategoryConsTruction')->name('construction.route');
     Route::post('/update/construction', 'UpdateConstruction')->name('update.construction');
 });
 
 
 //SlideShowController
 Route::controller(SlideShowController::class)->group(function(){
-    Route::get('/category/slideshow', 'SliderShow')->name('slideshow.route');
+    Route::get('/slideshow', 'SliderShow')->name('slideshow.route');
     Route::post('/store/slideshow', 'StoreSliderShow')->name('slideshow.store');
     Route::get('/all/slideshow', 'SliderShowAll')->name('slideshow.route.all');
     Route::get('/Edit/slideshow/{id}', 'SliderShowEdit')->name('slideshow.route.edit');
@@ -64,13 +67,37 @@ Route::controller(SlideShowController::class)->group(function(){
 Route::controller(CustomerReviewController::class)->group(function(){
 
     Route::get('/customerreview', 'CustomerReview')->name('customerreview.route');
-    Route::post('/update/customerreview', 'UpdateCustomerReview')->name('route.CustomerReview.update');
+    Route::post('/add/customerreview', 'UpdateCustomerReview')->name('route.CustomerReview.update');
     Route::get('/all/customerreview', 'CustomerReviewAll')->name('route.CustomerReview.all');
     Route::get('/edit/customerreview/{id}', 'CustomerReviewEdit')->name('CustomerReview.route.edit');
-    Route::post('/editupdate/customerreview', 'UpdateEditCustomerReview')->name('CustomerReview.route.updateedit');
+    Route::post('/update/customerreview', 'UpdateEditCustomerReview')->name('CustomerReview.route.updateedit');
     Route::get('/Delete/customerreview/{id}', 'CustomerReviewDelete')->name('CustomerReview.route.delete');
    
 });
+
+
+//PartnerController
+Route::controller(PartnerController::class)->group(function(){
+    Route::get('/partner', 'Partner')->name('partner.route');
+    Route::post('/add/partner', 'PartnerAddNew')->name('partner.route.add');
+    Route::get('/all/partner', 'PartnerAll')->name('partner.route.all');
+    Route::get('/edit/partner/{id}', 'PartnerEdit')->name('partner.route.edit');
+    Route::post('/update/partner', 'PartnerUpdate')->name('partner.route.update');
+    Route::get('/delete/partner/{id}', 'PartnerDelete')->name('partner.route.delete');
+});
+
+
+//PartnerController
+Route::controller(AboutController::class)->group(function(){
+    Route::get('/about', 'AboutPage')->name('about.page');
+    Route::post('/add/about', 'AboutPageAdd')->name('about.page.add');
+    Route::get('/all/about', 'AboutPageAll')->name('about.page.all');
+    Route::get('/edit/about/{id}', 'AboutPageEdit')->name('about.page.edit');
+    Route::post('/update/about', 'AboutPageUpdate')->name('about.page.update');
+    Route::get('/delete/about/{id}', 'AboutPageDelete')->name('about.page.delete');
+    Route::get('/company', 'AboutCompanyPage')->name('about.page.company');
+});
+
 
 
 require __DIR__.'/auth.php';
