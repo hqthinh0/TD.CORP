@@ -19,7 +19,7 @@
 					<nav class="nav-global-wrap">
 						<ul class="nav-global">
 							<li class="active">
-								<a href="./" class="nav-item">Trang Chủ</a>
+								<a href="{{ url('/') }}" class="nav-item">Trang Chủ</a>
 							</li>
 							<li class="">
 								<a href="{{ route('about.page.company') }}" class="nav-item">Giới thiệu</a>

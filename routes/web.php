@@ -9,6 +9,8 @@ use App\Http\Controllers\SliderShow\SlideShowController;
 use App\Http\Controllers\CustomerReview\CustomerReviewController;
 use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\About\AboutController;
+use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\SubCategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,7 +89,7 @@ Route::controller(PartnerController::class)->group(function(){
 });
 
 
-//PartnerController
+//AboutController
 Route::controller(AboutController::class)->group(function(){
     Route::get('/about', 'AboutPage')->name('about.page');
     Route::post('/add/about', 'AboutPageAdd')->name('about.page.add');
@@ -97,6 +99,29 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/delete/about/{id}', 'AboutPageDelete')->name('about.page.delete');
     Route::get('/company', 'AboutCompanyPage')->name('about.page.company');
 });
+
+
+//categoryController
+Route::controller(CategoryController::class)->group(function(){
+    Route::get('/category', 'CategoryPage')->name('category.page');
+    Route::get('/add/category', 'CategoryPageAdd')->name('category.page.add');
+    Route::post('/store/category', 'CategoryPageUpdate')->name('category.page.store');
+    Route::get('/all/category', 'CategoryPageAll')->name('category.page.all');
+    Route::get('/edit/category/{id}', 'CategoryPageEdit')->name('category.page.edit');
+    Route::post('/update/category', 'CategoryPageUpdateEdit')->name('category.page.update');
+    Route::get('/delete/category/{id}', 'CategoryPageDelete')->name('category.page.delete');
+});
+
+Route::controller(SubCategoryController::class)->group(function(){
+    Route::get('/subcategory', 'SubCategoryPage')->name('subcategory.page');
+    Route::get('/add/subcategory', 'SubCategoryPageAdd')->name('subcategory.page.add');
+    Route::post('/store/subcategory', 'SubCategoryPageUpdate')->name('subcategory.page.store');
+    Route::get('/all/subcategory', 'SubCategoryPageAll')->name('subcategory.page.all');
+    Route::get('/edit/subcategory/{id}', 'SubCategoryPageEdit')->name('subcategory.page.edit');
+    Route::post('/update/subcategory', 'SubCategoryPageUpdateEdit')->name('subcategory.page.update');
+    Route::get('/delete/subcategory/{id}', 'SubCategoryPageDelete')->name('subcategory.page.delete');
+});
+
 
 
 

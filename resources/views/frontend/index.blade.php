@@ -5,6 +5,7 @@
   $SliderShow = App\Models\SliderShow::all();
   $CustomReview = App\Models\CustomerReview::all();
   $partner = App\Models\partner::all();
+  $category = App\Models\Category::all();
 @endphp
 
 <div id="l-main">
@@ -13,7 +14,7 @@
 				@foreach($SliderShow as $item)
 			<div class="slider__nav slick-slider">
 				<figure class="js-fullbg slider__bg">
-					<img class="slider__bg--img fluid-image" src="{{ asset($item->multi_Images)}}" />
+					<img class="slider__bg--img fluid-image" src="{{ asset($item->multi_Images) }}" />
 				</figure>
 			</div>
 			@endforeach
@@ -33,24 +34,29 @@
 		</div>
 	</section>
 	
-	<section class="category--index ">
+	<section class="category--index">
 		<div class="wrp-container">
 			<h2 class="hdg-lv2 hdg-lv2--center fadeInUp"> <span class="color-primary">Công trình đã thi công</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box category">
 				<div class="grid-row box-grid">
+
+				@foreach($category as $item)
+					
 					<div class="grid-col--3 js-animation slideInUp" data-delay="0.2">
 						<div class="box-category">
-							<a href="./construction/#housecity" class="box-category__href">
+							<a href="{{url('construction/'.$item->id.'/'.$item->category_slug')}}" class="box-category__href">
 								<div class="box-category__img">
 									<figure class="box-image">
-										<img src="{{ asset('frontend/assets/images/category/category_images_01.png')}}" alt="" class="fluid-image" >
+										<img src="{{ asset($item->category_image) }}" alt="" class="fluid-image" >
 									</figure>
 								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">Nhà Phố</span></h4>
+								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">{{$item->category_name}}</span></h4>
 							</a>
 						</div>
 					</div>
-					<div class="grid-col--3 js-animation slideInUp" data-delay="0.3">
+
+				@endforeach
+					<!-- <div class="grid-col--3 js-animation slideInUp" data-delay="0.3">
 						<div class="box-category">
 							<a href="./construction/#villa" class="box-category__href">
 								<div class="box-category__img">
@@ -85,13 +91,13 @@
 								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">Nhà Cấp bốn</span></h4>
 							</a>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 	</section>
 
-		<section class="service ">
+		<section class="service">
 			<div class="wrp-container">
 			<h2 class="hdg-lv2 hdg-lv2--center fadeInUp"> <span class="color-primary">Dịch vụ</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box service">

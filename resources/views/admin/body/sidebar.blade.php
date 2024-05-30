@@ -85,6 +85,8 @@
         </ul>
       </div>
     </li>
+   <!-- partners End -->
+    
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#About" aria-expanded="false"
         aria-controls="About">
@@ -99,7 +101,37 @@
         </ul>
       </div>
     </li>
-   <!-- partners End -->
+
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#Category" aria-expanded="false"
+        aria-controls="Category">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">Category</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="Category">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('category.page.all')}}">all category</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('category.page.add')}}">add category</a></li>
+        </ul>
+      </div>
+    </li>
+
+
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#subcategory" aria-expanded="false"
+        aria-controls="subcategory">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">Sub Category</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="subcategory">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('subcategory.page.all')}}">all sub category</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('subcategory.page.add')}}">add sub category</a></li>
+        </ul>
+      </div>
+    </li>
 
 
      <!-- Construction END -->
