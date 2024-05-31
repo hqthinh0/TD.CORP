@@ -39,59 +39,20 @@
 			<h2 class="hdg-lv2 hdg-lv2--center fadeInUp"> <span class="color-primary">Công trình đã thi công</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box category">
 				<div class="grid-row box-grid">
-
-				@foreach($category as $item)
-					
-					<div class="grid-col--3 js-animation slideInUp" data-delay="0.2">
-						<div class="box-category">
-							<a href="{{url('construction/'.$item->id.'/'.$item->category_slug')}}" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img src="{{ asset($item->category_image) }}" alt="" class="fluid-image" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">{{$item->category_name}}</span></h4>
-							</a>
+					@foreach($category as $item)
+						<div class="grid-col--3 js-animation slideInUp" data-delay="0.2">
+							<div class="box-category">
+								<a href="{{ url('construction/'.$item->hastag) }}" class="box-category__href">
+									<div class="box-category__img">
+										<figure class="box-image">
+											<img src="{{ asset($item->category_image) }}" alt="" class="fluid-image" >
+										</figure>
+									</div>
+									<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">{{$item->category_name}}</span></h4>
+								</a>
+							</div>
 						</div>
-					</div>
-
-				@endforeach
-					<!-- <div class="grid-col--3 js-animation slideInUp" data-delay="0.3">
-						<div class="box-category">
-							<a href="./construction/#villa" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img src="{{ asset('frontend/assets/images/category/category_images_02.png')}}" alt="" class="fluid-image" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">Biệt Thự</span></h4>
-							</a>
-						</div>
-					</div>
-					<div class="grid-col--3 js-animation slideInUp" data-delay="0.4">
-						<div class="box-category">
-							<a href="./construction/#interior" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img src="{{ asset('frontend/assets/images/category/category_images_03.png')}}" alt="" class="fluid-image" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">Nội Thất</span></h4>
-							</a>
-						</div>
-					</div>
-					<div class="grid-col--3 js-animation slideInUp" data-delay="0.5">
-						<div class="box-category">
-							<a href="./construction/#housefour" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img  src="{{ asset('frontend/assets/images/category/category_images_04.png')}}"  alt="" class="fluid-image" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center"> <span class="color-seconds">Nhà Cấp bốn</span></h4>
-							</a>
-						</div>
-					</div> -->
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -201,7 +162,7 @@
 					</div>
 					<div class="grid-col--3 js-animation slideInUp" data-delay="0.4">
 						<div class="box-category">
-							<div class="experience__item ">
+							<div class="experience__item  ">
 								<div class="experience__item--img">
 									<figure>
 										<img src="{{ asset('frontend/assets/images/icon_03.png')}}" alt="" class="fluid-image">
@@ -214,7 +175,7 @@
 					</div>
 					<div class="grid-col--3 js-animation slideInUp" data-delay="0.5">
 						<div class="box-category">
-							<div class="experience__item counter">
+							<div class="experience__item ">
 								<div class="experience__item--img">
 									<figure>
 										<img src="{{ asset('frontend/assets/images/icon_04.png')}}" alt="" class="fluid-image">

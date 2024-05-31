@@ -14,8 +14,14 @@ return new class extends Migration
         Schema::create('subcategories', function (Blueprint $table) {
             $table->id();
             $table->string('category_id')->nullable();
-            $table->string('subcategory_name')->nullable();
             $table->string('subcategory_slug')->nullable();
+            $table->string('subcategory_title')->nullable();
+            $table->string('subcategory_name')->nullable();
+            $table->string('subcategory_area')->nullable();
+            $table->string('subcategory_map')->nullable();
+            $table->string('subcategory_building')->nullable();
+	        $table->text('description')->nullable();
+            $table->string('subcategory_images')->nullable();
             $table->timestamps();
         });
     }

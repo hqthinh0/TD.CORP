@@ -4546,6 +4546,9 @@ section + section {
 .service__box {
   margin-top: 6rem;
 }
+.sec-model{
+  margin-top: 4rem;
+}
 .service__box--content {
   position: relative;
 }

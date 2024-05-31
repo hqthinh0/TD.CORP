@@ -74,7 +74,7 @@ class AboutController extends Controller
         return redirect()->back()->with($notification);
     }
 
-    public  function AboutCompanyPage(){
+    public function AboutCompanyPage(){
          $company = About::find(1);
          return view('frontend.company',compact('company'));
     }//

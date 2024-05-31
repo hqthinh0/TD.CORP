@@ -133,6 +133,21 @@
       </div>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#models" aria-expanded="false"
+        aria-controls="models">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">models</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="models">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('models.page.all')}}">models  all </a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('models.page.add')}}">models  add</a></li>
+        </ul>
+      </div>
+    </li>
+
 
      <!-- Construction END -->
     <!-- <li class="nav-item">

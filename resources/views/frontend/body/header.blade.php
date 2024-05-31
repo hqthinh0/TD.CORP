@@ -7,9 +7,7 @@
 				<div class="l-header__wrapper">
 						
 					<h1 id="sitelogo">
-						<a href="./"
-							><img src="{{ asset('frontend/assets/images/logo.png')}}" alt="★★★" class="fluid-image"
-						/></a>	
+						<a href="{{ url('/') }}"><img src="{{ asset('frontend/assets/images/logo.png')}}" alt="★★★" class="fluid-image"/></a>	
 					</h1>
 					<a class="nav-global-menu">
 						<span class="b1" aria-hidden="true"></span>
@@ -25,13 +23,13 @@
 								<a href="{{ route('about.page.company') }}" class="nav-item">Giới thiệu</a>
 							</li>
 							<li class="">
-								<a href="./construction/" class="nav-item">Thi công</a>
+								<a href="{{ route('construction.page.company') }}" class="nav-item">Thi công</a>
 							</li>
 							<li class="">
 								<a href="./serivce/" class="nav-item">dịch vụ</a>
 							</li>
 							<li class="">
-								<a href="./model/" class="nav-item">Nhà mẫu</a>
+								<a href="{{ route('models.page.models') }}" class="nav-item">Nhà mẫu</a>
 							</li>
 							<li class="">
 								<a href="./estimate/" class="nav-item">Báo giá</a>

@@ -30,7 +30,7 @@ class CategoryController extends Controller
                 $manager = new ImageManager(new Driver());
                 $name_gen = hexdec(uniqid()).'.'.$request->file('category_image')->getClientOriginalExtension();
                 $img = $manager->read($request->file('category_image'));
-                $img = $img->resize(636,852);
+    
 
                 $img->toJpeg()->save(base_path('public/img/category/'.$name_gen));
                 $save_url = "img/category/".$name_gen;
@@ -38,6 +38,7 @@ class CategoryController extends Controller
               Category::insert([
                     'category_name' => $request->category_name,
                     'category_slug' => strtolower(str_replace('','-',$request->category_name)),
+                    'hastag' => $request->hastag,
                     'category_image' => $save_url,
                      
                 ]);
@@ -70,9 +71,10 @@ class CategoryController extends Controller
 
 
 
-                 $category = Category::findOrFail($updateImages);
+                $category = Category::findOrFail($updateImages);
              
                 $category->category_name = $request->category_name;
+                $category->hastag = $request->hastag;
                 $category->category_slug = strtolower(str_replace('','-',$request->category_name));
                 $category->category_image = $save_url;
 
@@ -81,13 +83,10 @@ class CategoryController extends Controller
 
 
                 $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
-
                  return redirect()->route('category.page.all')->with($notification);
           }
 
     }//end method
-
-
 
     public function CategoryPageDelete($id){
          $Deleteconent = Category::findOrFail($id);
@@ -101,7 +100,7 @@ class CategoryController extends Controller
     }
 
     
-
+    
 }
 
 

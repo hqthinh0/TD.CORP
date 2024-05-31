@@ -18,25 +18,41 @@ class SubCategoryController extends Controller
         $subcategory = Subcategory::latest()->get();
        return view('backend.sub_category.sub_category_all', compact('subcategory'));
     }
+
+
      public function SubCategoryPageAdd(){
         $categories = Category::orderBy('category_name','ASC')->get();
         return view('backend.sub_category.add_subcategory',compact('categories'));
-
     }
 
     public function SubCategoryPageUpdate(Request $request){
 
+           if($request->file('subcategory_images')){
+                $manager = new ImageManager(new Driver());
+                $name_gen = hexdec(uniqid()).'.'.$request->file('subcategory_images')->getClientOriginalExtension();
+                $img = $manager->read($request->file('subcategory_images'));
+         
+
+                $img->toJpeg()->save(base_path('public/img/construction/'.$name_gen));
+                $save_url = "img/construction/".$name_gen;
 
               Subcategory::insert([
                     'category_id' => $request->category_id,
+                    'subcategory_title' => $request->subcategory_title,
                     'subcategory_name' => $request->subcategory_name,
+                    'subcategory_building' => $request->subcategory_building,
+                    'subcategory_area' => $request->subcategory_area,
+                    'description' => $request->description,
+                    'subcategory_map' => $request->subcategory_map,
                     'subcategory_slug' => strtolower(str_replace('','-',$request->subcategory_name)),
+                    'subcategory_images' => $save_url,
                      
                 ]);
 
                 $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('subcategory.page.all')->with($notification);
+            }
           
     }
 
@@ -55,18 +71,34 @@ class SubCategoryController extends Controller
 
         $sub_id = $request->id;
 
-        $subcategory = Subcategory::findOrFail($sub_id);
-    
-        $subcategory->category_id = $request->category_id;
-        $subcategory->subcategory_name = $request->subcategory_name;
-        $subcategory->subcategory_slug = strtolower(str_replace('','-',$request->subcategory_name));
-        $subcategory->updated_at = Carbon::now();
-        $subcategory->save();
+             if($request->file('subcategory_images')){
+                $manager = new ImageManager(new Driver());
+                $name_gen = hexdec(uniqid()).'.'.$request->file('subcategory_images')->getClientOriginalExtension();
+                $img = $manager->read($request->file('subcategory_images'));
+         
+                $img->toJpeg()->save(base_path('public/img/construction/'.$name_gen));
+                $save_url = "img/construction/".$name_gen;
 
 
-        $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $subcategory = Subcategory::findOrFail($sub_id);
+            
+                $subcategory->category_id = $request->category_id;
+                $subcategory->subcategory_name = $request->subcategory_name;
+                $subcategory->subcategory_title = $request->subcategory_title;
+                $subcategory->subcategory_area = $request->subcategory_area;
+                $subcategory->subcategory_map = $request->subcategory_map;
+                $subcategory->description = $request->description;
+                $subcategory->subcategory_building = $request->subcategory_building;
+                $subcategory->subcategory_slug = strtolower(str_replace('','-',$request->subcategory_name));
+                $subcategory->subcategory_images = $save_url;
+                $subcategory->updated_at = Carbon::now();
+                $subcategory->save();
 
-            return redirect()->route('subcategory.page.all')->with($notification);
+
+                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+
+                 return redirect()->route('subcategory.page.all')->with($notification);
+         }
           
 
     }//end method
@@ -77,6 +109,17 @@ class SubCategoryController extends Controller
           $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
 
           return redirect()->back()->with($notification);
+    }
+
+       public function ConstructionPage(){
+         $Showconstruction = Subcategory::latest()->get();
+         return view('frontend.construction',compact('Showconstruction'));
+    }//
+
+    public function ConstructionPageDetail($name){
+      $name = str_replace('-', ' ', $name);
+      $ShowdetailPage = Subcategory::where('subcategory_title', $name)->firstOrFail();
+      return view('frontend.construction.detail',compact('ShowdetailPage'));
     }
 }
 

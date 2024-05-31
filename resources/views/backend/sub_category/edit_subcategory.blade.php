@@ -37,8 +37,57 @@
                     <input name="subcategory_name" class="form-control" type="text" value="{{$editSubcategory->subcategory_name}}" placeholder="Nhập tên"  id="example-text-input">
                 </div>
             </div>
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_title</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_title" class="form-control" type="text" value="{{$editSubcategory->subcategory_title}}" placeholder="nhập nội dung" id="example-text-input">
+                </div>
+            </div>
+
+             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_area</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_area" class="form-control" type="text" value="{{$editSubcategory->subcategory_area}}" placeholder="nhập nội dung" id="example-text-input">
+                </div>
+            </div>
+             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_map</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_map" class="form-control" type="text" value="{{$editSubcategory->subcategory_map}}" placeholder="nhập nội dung" id="example-text-input">
+                </div>
+            </div>
+             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_building</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_building" class="form-control" type="text" value="{{$editSubcategory->subcategory_building}}" placeholder="nhập nội dung" id="example-text-input">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <div class="col-sm-10">
+                   <textarea id="elm1" name="description">
+                    {{ $editSubcategory->description }}
+                    </textarea>
+                </div>
+            </div>
        
            
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">Edit Images</label>
+                <div class="col-sm-10">
+                  <input name="subcategory_images" class="form-control" type="file"  id="image" >
+                </div>
+            </div>
+            <!-- end row -->
+
+              <div class="row mb-3">
+                 <label for="example-text-input" class="col-sm-2 col-form-label">  </label>
+                <div class="col-sm-10">
+                       <img id="showImage" style="width: 300px; height: auto;" class="rounded avatar-lg" src="{{ asset($editSubcategory->subcategory_images) }}" alt="Card image cap">
+                </div>
+            </div>
             <!-- end row -->
 
             <!-- end row -->

@@ -34,10 +34,59 @@
              <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">sub category</label>
                 <div class="col-sm-10">
-                    <input name="subcategory_name" class="form-control" type="text" value="" placeholder="Nhập tên"  id="example-text-input">
+                    <input name="subcategory_name" class="form-control" type="text" value="" placeholder="Nhập tên khách hàng"  id="example-text-input">
                 </div>
             </div>
        
+             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_title</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_title" class="form-control" type="text" value="" placeholder="Nhập subcategory_title"  id="example-text-input">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_area</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_area" class="form-control" type="text" value="" placeholder="Nhập subcategory_area"  id="example-text-input">
+                </div>
+            </div>
+             <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_map</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_map" class="form-control" type="text" value="" placeholder="Nhập subcategory_map"  id="example-text-input">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_building</label>
+                <div class="col-sm-10">
+                    <input name="subcategory_building" class="form-control" type="text" value="" placeholder="Nhập subcategory_building"  id="example-text-input">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <div class="col-sm-10">
+                   <textarea id="elm1" name="description">
+                        {{ $category->description }}
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <label for="example-text-input" class="col-sm-2 col-form-label">category Images</label>
+                <div class="col-sm-10">
+                  <input name="subcategory_images" class="form-control" type="file"  id="image" >
+                </div>
+            </div>
+            <!-- end row -->
+
+              <div class="row mb-3">
+                 <label for="example-text-input" class="col-sm-2 col-form-label">  </label>
+                <div class="col-sm-10">
+                       <img id="showImage" style="width: 300px; height: auto;" class="rounded avatar-lg" src="{{ url('img/no_image.jpg') }}" alt="Card image cap">
+                    <!-- <img id="showImage" style="width: 100px; height:100px" class="rounded avatar-lg" src="{{ asset('backend/assets/images/small/img-5.jpg') }}" alt="Card image cap"> -->
+                </div>
+            </div>
            
             <!-- end row -->
 

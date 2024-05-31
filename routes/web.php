@@ -11,6 +11,8 @@ use App\Http\Controllers\Partner\PartnerController;
 use App\Http\Controllers\About\AboutController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
+use App\Http\Controllers\Backend\DetailCategoryController;
+use App\Http\Controllers\Models\ModelsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -97,6 +99,8 @@ Route::controller(AboutController::class)->group(function(){
     Route::get('/edit/about/{id}', 'AboutPageEdit')->name('about.page.edit');
     Route::post('/update/about', 'AboutPageUpdate')->name('about.page.update');
     Route::get('/delete/about/{id}', 'AboutPageDelete')->name('about.page.delete');
+
+
     Route::get('/company', 'AboutCompanyPage')->name('about.page.company');
 });
 
@@ -120,7 +124,42 @@ Route::controller(SubCategoryController::class)->group(function(){
     Route::get('/edit/subcategory/{id}', 'SubCategoryPageEdit')->name('subcategory.page.edit');
     Route::post('/update/subcategory', 'SubCategoryPageUpdateEdit')->name('subcategory.page.update');
     Route::get('/delete/subcategory/{id}', 'SubCategoryPageDelete')->name('subcategory.page.delete');
+
+    Route::get('/construction', 'ConstructionPage')->name('construction.page.company');
+    Route::get('/construction/detail/{name}', 'ConstructionPageDetail')->name('construction.page.detail');
+
 });
+
+
+//models
+Route::controller(ModelsController::class)->group(function(){
+    Route::get('/models', 'ModelsPage')->name('models.page');
+    Route::get('/add/models', 'ModelsPageAdd')->name('models.page.add');
+    Route::post('/store/models', 'ModelsPageUpdate')->name('models.page.store');
+    Route::get('/all/models', 'ModelsPageAll')->name('models.page.all');
+    Route::get('/edit/models/{id}', 'ModelsPageEdit')->name('models.page.edit');
+    Route::post('/update/models', 'ModelsPageUpdateEdit')->name('models.page.update');
+    Route::get('/delete/models/{id}', 'ModelsPageDelete')->name('models.page.delete');
+
+    Route::get('/models', 'ModelsPageShow')->name('models.page.models');
+    Route::get('/models/detail/{name}', 'ModelsPageDetail')->name('models.page.detail');
+
+});
+
+
+
+//delete
+Route::controller(DetailCategoryController::class)->group(function(){
+    Route::get('/detail', 'DetailCategoryPage')->name('detailcategory.page');
+    Route::get('/add/detail', 'DetailCategoryPageAdd')->name('detailcategory.page.add');
+    Route::post('/store/detail', 'DetailCategoryPageUpdate')->name('detailcategory.page.store');
+    Route::get('/all/detail', 'DetailCategoryPageAll')->name('detailcategory.page.all');
+    Route::get('/edit/detail/{id}', 'DetailCategoryPageEdit')->name('detailcategory.page.edit');
+    Route::post('/update/detail', 'DetailCategoryPageUpdateEdit')->name('detailcategory.page.update');
+    Route::get('/delete/detail/{id}', 'DetailCategoryPageDelete')->name('detailcategory.page.delete');
+
+});
+
 
 
 
