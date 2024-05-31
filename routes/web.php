@@ -182,21 +182,6 @@ Route::controller(EstimateController::class)->group(function(){
 
 
 
-//delete
-Route::controller(DetailCategoryController::class)->group(function(){
-    Route::get('/detail', 'DetailCategoryPage')->name('detailcategory.page');
-    Route::get('/add/detail', 'DetailCategoryPageAdd')->name('detailcategory.page.add');
-    Route::post('/store/detail', 'DetailCategoryPageUpdate')->name('detailcategory.page.store');
-    Route::get('/all/detail', 'DetailCategoryPageAll')->name('detailcategory.page.all');
-    Route::get('/edit/detail/{id}', 'DetailCategoryPageEdit')->name('detailcategory.page.edit');
-    Route::post('/update/detail', 'DetailCategoryPageUpdateEdit')->name('detailcategory.page.update');
-    Route::get('/delete/detail/{id}', 'DetailCategoryPageDelete')->name('detailcategory.page.delete');
-
-});
-
-
-
-
 
 require __DIR__.'/auth.php';
 
