@@ -148,6 +148,37 @@
       </div>
     </li>
 
+      <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#services" aria-expanded="false"
+        aria-controls="services">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">services</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="services">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('services.page.all')}}">services  all </a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('services.page.add')}}">services  add</a></li>
+        </ul>
+      </div>
+    </li>
+
+      <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="collapse" href="#estimate" aria-expanded="false"
+        aria-controls="estimate">
+        <i class="menu-icon mdi mdi-card-text-outline"></i>
+        <span class="menu-title">estimate</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="estimate">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"><a class="nav-link" href="{{route('estimate.page.all')}}">estimate  all </a></li>
+          <li class="nav-item"><a class="nav-link" href="{{route('estimate.page.add')}}">estimate  add</a></li>
+        </ul>
+      </div>
+    </li>
+
+
 
      <!-- Construction END -->
     <!-- <li class="nav-item">

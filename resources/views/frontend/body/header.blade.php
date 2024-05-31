@@ -16,23 +16,23 @@
 					</a>
 					<nav class="nav-global-wrap">
 						<ul class="nav-global">
-							<li class="active">
+							<li class="{{ Request::url() == url('/') ? 'active' : '' }}">
 								<a href="{{ url('/') }}" class="nav-item">Trang Chủ</a>
 							</li>
-							<li class="">
+						   <li class="{{ Request::url() == route('about.page.company') ? 'active' : '' }}">
 								<a href="{{ route('about.page.company') }}" class="nav-item">Giới thiệu</a>
 							</li>
-							<li class="">
+						   <li class="{{ Request::url() == route('construction.page.company') ? 'active' : '' }}">
 								<a href="{{ route('construction.page.company') }}" class="nav-item">Thi công</a>
 							</li>
-							<li class="">
-								<a href="./serivce/" class="nav-item">dịch vụ</a>
+							      <li class="{{ Request::url() == route('services.page.services') ? 'active' : '' }}">
+								<a href="{{ route('services.page.services') }}" class="nav-item">dịch vụ</a>
 							</li>
-							<li class="">
+						 	<li class="{{ Request::url() == route('models.page.models') ? 'active' : '' }}">
 								<a href="{{ route('models.page.models') }}" class="nav-item">Nhà mẫu</a>
 							</li>
-							<li class="">
-								<a href="./estimate/" class="nav-item">Báo giá</a>
+						    <li class="{{ Request::url() == route('estimate.page.estimate') ? 'active' : '' }}">
+								<a href="{{ route('estimate.page.estimate') }}" class="nav-item">Báo giá</a>
 							</li>
 							<!-- <li class="">
 								<a href="./recruitment/" class="nav-item">Tuyển dụng</a>

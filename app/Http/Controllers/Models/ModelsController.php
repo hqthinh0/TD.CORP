@@ -14,7 +14,7 @@ class ModelsController extends Controller
 {
     //
 
-       public function ModelsPageAll(){
+    public function ModelsPageAll(){
         $models = Models::latest()->get();
        return view('backend.modelpages.modelpages_all', compact('models'));
     }
@@ -77,7 +77,7 @@ class ModelsController extends Controller
                 $models->models_title = $request->models_title;
                 $models->models_description = $request->models_description;
                 $models->models_slug = strtolower(str_replace('','-',$request->models_title));
-                $models->category_image = $save_url;
+                $models->models_images = $save_url;
 
                 $models->updated_at = Carbon::now();
                 $models->save();
@@ -91,7 +91,7 @@ class ModelsController extends Controller
 
     public function ModelsPageDelete($id){
          $Deleteconent = Models::findOrFail($id);
-         $img = $Deleteconent->category_image;
+         $img = $Deleteconent->models_images;
          unlink($img);
 
             Models::findOrFail($id)->delete();

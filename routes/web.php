@@ -13,7 +13,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\DetailCategoryController;
 use App\Http\Controllers\Models\ModelsController;
-
+use App\Http\Controllers\Service\ServiceController;
+use App\Http\Controllers\Estimate\EstimateController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -143,6 +144,39 @@ Route::controller(ModelsController::class)->group(function(){
 
     Route::get('/models', 'ModelsPageShow')->name('models.page.models');
     Route::get('/models/detail/{name}', 'ModelsPageDetail')->name('models.page.detail');
+
+});
+
+
+//ServiceController
+Route::controller(ServiceController::class)->group(function(){
+    Route::get('/services', 'ServicesPage')->name('services.page');
+    Route::get('/add/services', 'ServicesPageAdd')->name('services.page.add');
+    Route::post('/store/services', 'ServicesPageUpdate')->name('services.page.store');
+    Route::get('/all/services', 'ServicesPageAll')->name('services.page.all');
+    Route::get('/edit/services/{id}', 'ServicesPageEdit')->name('services.page.edit');
+    Route::post('/update/services', 'ServicesPageUpdateEdit')->name('services.page.update');
+    Route::get('/delete/services/{id}', 'ServicesPageDelete')->name('services.page.delete');
+
+    Route::get('/services', 'ServicesPageShow')->name('services.page.services');
+    Route::get('/services/detail/{name}', 'ServicesPageDetail')->name('services.page.detail');
+
+});
+
+
+
+
+//EstimateController
+Route::controller(EstimateController::class)->group(function(){
+    Route::get('/estimate', 'EstimatePage')->name('estimate.page');
+    Route::get('/add/estimate', 'EstimatePageAdd')->name('estimate.page.add');
+    Route::post('/store/estimate', 'EstimatePageUpdate')->name('estimate.page.store');
+    Route::get('/all/estimate', 'EstimatePageAll')->name('estimate.page.all');
+    Route::get('/edit/estimate/{id}', 'EstimatePageEdit')->name('estimate.page.edit');
+    Route::post('/update/estimate', 'EstimatePageUpdateEdit')->name('estimate.page.update');
+    Route::get('/delete/estimate/{id}', 'EstimatePageDelete')->name('estimate.page.delete');
+    Route::get('/estimate', 'EstimatePageShow')->name('estimate.page.estimate');
+    Route::get('/estimate/detail/{name}', 'EstimatePageDetail')->name('estimate.page.detail');
 
 });
 

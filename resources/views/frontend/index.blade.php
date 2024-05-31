@@ -6,6 +6,7 @@
   $CustomReview = App\Models\CustomerReview::all();
   $partner = App\Models\partner::all();
   $category = App\Models\Category::all();
+  $services = App\Models\Service::all();
 @endphp
 
 <div id="l-main">
@@ -63,66 +64,21 @@
 			<h2 class="hdg-lv2 hdg-lv2--center fadeInUp"> <span class="color-primary">Dịch vụ</span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
 			<div class="box service">
 				<div class="grid-row box-grid">
+					
+					@foreach($services as $item)
 					<div class="grid-col--4 js-animation slideInUp" data-delay="0.2">
 						<div class="box-category">
-							<a href="./serivce/" class="box-category__href">
+							<a href="{{ route('services.page.detail',str_replace(' ', '-', $item->service_title)) }}" class="box-category__href">
 								<div class="box-category__img">
 									<figure class="box-image">
-										<img  src="{{ asset('frontend/assets/images/serivce/service_images_01.png')}}" alt="" >
+										<img  src="{{asset($item->service_images)}}" alt="" >
 									</figure>
 								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">Thiết kế kiến trúc</span></h4>
+								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">{{$item->service_title}}</span></h4>
 							</a>
 						</div>
 					</div>
-					<div class="grid-col--4 js-animation slideInUp" data-delay="0.4">
-						<div class="box-category">
-							<a href="./serivce/" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img  src="{{ asset('frontend/assets/images/serivce/service_images_02.png')}}"  alt="" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">Thiết kế nội thất</span></h4>
-							</a>
-						</div>
-					</div>
-					<div class="grid-col--4 js-animation slideInUp" data-delay="0.6">
-						<div class="box-category">
-							<a href="./serivce/" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img src="{{ asset('frontend/assets/images/serivce/service_images_03.png')}}" alt="" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">Thi Công Nhà Trọn gói</span></h4>
-							</a>
-						</div>
-					</div>
-					<div class="grid-col--4 js-animation slideInUp" data-delay="0.2">
-						<div class="box-category">
-							<a href="./serivce/" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img  src="{{ asset('frontend/assets/images/serivce/service_images_04.png')}}" alt="" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">Sửa chửa cải tạo nhà ở, văn phòng</span></h4>
-							</a>
-						</div>
-					</div>
-					<div class="grid-col--4 js-animation slideInUp" data-delay="0.4">
-						<div class="box-category">
-							<a href="./serivce/" class="box-category__href">
-								<div class="box-category__img">
-									<figure class="box-image">
-										<img  src="{{ asset('frontend/assets/images/serivce/service_images_05.png')}}" alt="" >
-									</figure>
-								</div>
-								<h4 class="hdg-lv4 hdg-lv4--center txt-capitalize"> <span class="color-primary">Chính sách bảo hành - khuyến mãi</span></h4>
-							</a>
-						</div>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
