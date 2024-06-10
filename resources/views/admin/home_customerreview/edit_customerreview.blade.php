@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Update infomation</h4>
+            <h4 class="card-title text">cập nhật</h4>
 
             <form  method="post" action="{{ route('CustomerReview.route.updateedit') }}" enctype="multipart/form-data" >
                 @csrf
@@ -40,7 +40,7 @@
 
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Edit Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="customer_img" class="form-control" type="file"  id="image" >
                 </div>
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light text" value="cập nhật">
             </form>
 
         </div>

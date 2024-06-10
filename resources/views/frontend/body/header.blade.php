@@ -37,8 +37,8 @@
 							<!-- <li class="">
 								<a href="./recruitment/" class="nav-item">Tuyển dụng</a>
 							</li> -->
-							<li class="">
-								<a href="./contact/" class="nav-item">liên hệ</a>
+							<li class="{{ Request::url() == route('contact.page.contact') ? 'active' : '' }}">
+								<a href="{{route('contact.page.contact')}}" class="nav-item">liên hệ</a>
 							</li>
 						
 						</ul>

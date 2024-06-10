@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Add New Partner</h4>
+            <h4 class="card-title">Thêm</h4>
 
             <form  method="post" action="{{ route('partner.route.add') }}" enctype="multipart/form-data" >
                 @csrf
@@ -18,7 +18,7 @@
             <!-- end row -->
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Image Partner</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">thêm các hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="partners_Images[]" class="form-control" type="file"  id="image" multiple="">
                 </div>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="add Images Partnes">
+            <input type="submit" class="btn btn-info waves-effect waves-light" value="Thêm Hình Ảnh">
             </form>
 
         </div>

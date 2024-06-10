@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">add Models</h4>
+            <h4 class="card-title text">thêm bài viết</h4>
 
             <form  method="post" action="{{ route('models.page.update') }}" enctype="multipart/form-data" >
                 @csrf
@@ -20,13 +20,13 @@
             
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Models title</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Tên</label>
                 <div class="col-sm-10">
                     <input name="models_title" class="form-control" type="text" value="{{$EditModels->models_title}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
               <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">nội dung</label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="models_description">
                       {{$EditModels->models_description}}
@@ -35,7 +35,7 @@
             </div>
        
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">models_images Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="models_images" class="form-control" type="file"  id="image" >
                 </div>
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light" value="Cập nhật">
             </form>
 
         </div>

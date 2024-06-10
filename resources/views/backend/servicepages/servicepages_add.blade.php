@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">add services</h4>
+            <h4 class="card-title text">Thêm Dịch vụ</h4>
 
             <form  method="post" action="{{ route('services.page.store') }}" enctype="multipart/form-data" >
                 @csrf
@@ -18,19 +18,19 @@
             <!-- end row -->
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">services title</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Tên Dịch Vụ</label>
                 <div class="col-sm-10">
                     <input name="service_title" class="form-control" type="text" value="" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">service_short</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Nội Dung Ngắn</label>
                 <div class="col-sm-10">
                     <input name="service_short" class="form-control" type="text" value="" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
               <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Nội Dung</label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="service_description">
                     </textarea>
@@ -38,7 +38,7 @@
             </div>
        
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">service_images Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Hình Ảnh</label>
                 <div class="col-sm-10">
                   <input name="service_images" class="form-control" type="file"  id="image" >
                 </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light text" value="Thêm bài viết">
             </form>
 
         </div>

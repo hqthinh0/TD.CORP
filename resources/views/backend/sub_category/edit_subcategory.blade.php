@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Edut sub Category</h4>
+            <h4 class="card-title text">Chỉnh sửa Bài viết</h4>
 
             <form  method="post" action="{{ route('subcategory.page.update') }}" enctype="multipart/form-data" >
                 @csrf
@@ -19,53 +19,53 @@
                   <input type="hidden" type="text" name="id" value="{{$editSubcategory->id}}">
            <div class="row mb-3">
 				<div class="col-sm-3">
-					<h6 class="mb-0">Category Name</h6>
+					<h6 class="mb-0 text">Danh mục</h6>
 				</div>
 				<div class="form-group col-sm-9 text-secondary">
-                    <select name="category_id" class="form-select mb-3" aria-label="Default select example">
-                        <option selected="">Open this select menu</option>
+                    <select name="category_id" class="form-select mb-3 text" aria-label="Default select example">
+                        <option selected="">chọn</option>
 
                         @foreach($categories as $category)
-                        <option value="{{ $category->id }}" {{ $category->id == $editSubcategory->category_id ? 'selected' : '' }}>{{ $category->category_name }}</option>
+                        <option class="text" value="{{ $category->id }}" {{ $category->id == $editSubcategory->category_id ? 'selected' : '' }}>{{ $category->category_name }}</option>
                         @endforeach
                     </select>
 				</div> 
 			</div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">sub category name</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Tên Chủ đầu tư</label>
                 <div class="col-sm-10">
                     <input name="subcategory_name" class="form-control" type="text" value="{{$editSubcategory->subcategory_name}}" placeholder="Nhập tên"  id="example-text-input">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_title</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Tiêu Đề</label>
                 <div class="col-sm-10">
                     <input name="subcategory_title" class="form-control" type="text" value="{{$editSubcategory->subcategory_title}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
 
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_area</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">diện tích</label>
                 <div class="col-sm-10">
                     <input name="subcategory_area" class="form-control" type="text" value="{{$editSubcategory->subcategory_area}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_map</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">địa chỉ</label>
                 <div class="col-sm-10">
                     <input name="subcategory_map" class="form-control" type="text" value="{{$editSubcategory->subcategory_map}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_building</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">số tầng</label>
                 <div class="col-sm-10">
                     <input name="subcategory_building" class="form-control" type="text" value="{{$editSubcategory->subcategory_building}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">bài viết</label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="description">
                     {{ $editSubcategory->description }}
@@ -75,7 +75,7 @@
        
            
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Edit Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Chỉnh sửa hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="subcategory_images" class="form-control" type="file"  id="image" >
                 </div>
@@ -91,7 +91,7 @@
             <!-- end row -->
 
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light text" value="cập nhật">
             </form>
 
         </div>

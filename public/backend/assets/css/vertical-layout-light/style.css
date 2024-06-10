@@ -12881,10 +12881,12 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
   height: var(--bs-card-height);
   color: var(--bs-body-color);
   word-wrap: break-word;
-  background-color: var(--bs-card-bg);
+  background: #fff;
   background-clip: border-box;
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
+  margin: 5rem auto;
+  width: 82rem;
 }
 .card > hr {
   margin-right: 0;
@@ -21004,7 +21006,7 @@ code {
 .footer {
   background: #F4F5F7;
   color: color(dark);
-  padding: 30px 2.45rem;
+ padding: 151px 8.45rem;
   transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
@@ -26050,6 +26052,7 @@ dl li {
   font-size: 12px;
   line-height: 16px;
   color: #8D8D8D;
+  text-wrap: balance;
   padding-top: 14px;
   padding-bottom: 14px;
   padding-left: 0;
@@ -28886,6 +28889,9 @@ div.tagsinput span.tag a {
 }
 
 .main-panel {
+  background: url('../../images/dashboard/weather-card.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: width 0.25s ease, margin 0.25s ease;
   width: calc(100% - 220px);
   min-height: calc(100vh - 97px);
@@ -30972,5 +30978,32 @@ div.tagsinput span.tag a {
   #settings-trigger {
     display: none;
   }
+}
+
+.table_card{
+  width: 100rem;
+}
+.card_document{
+  width: auto;
+}
+
+.text{
+  text-transform: capitalize;
+}
+.btn-edit img{
+    width: 30px !important;
+    height: 30px !important;
+    box-sizing: border-box;
+    display: block;
+}
+.btn-delete img {
+  width: 30px !important;
+  height: 30px !important;
+  box-sizing: border-box;
+  display: block;
+}
+.profile_h h4{
+ margin-top: 1rem;
+ margin-bottom: 1rem;
 }
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */

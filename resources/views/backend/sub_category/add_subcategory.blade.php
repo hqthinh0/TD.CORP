@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">add sub Category</h4>
+            <h4 class="card-title text">Thêm bài viết</h4>
 
             <form  method="post" action="{{ route('subcategory.page.store') }}" enctype="multipart/form-data" >
                 @csrf
@@ -19,7 +19,7 @@
 
            <div class="row mb-3">
 				<div class="col-sm-3">
-					<h6 class="mb-0">Category Name</h6>
+					<h6 class="mb-0">Danh mục</h6>
 				</div>
 				<div class="form-group col-sm-9 text-secondary">
                     <select name="category_id" class="form-select mb-3" aria-label="Default select example">
@@ -32,39 +32,39 @@
 				</div>
 			</div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">sub category</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Tên Chủ đầu tư</label>
                 <div class="col-sm-10">
                     <input name="subcategory_name" class="form-control" type="text" value="" placeholder="Nhập tên khách hàng"  id="example-text-input">
                 </div>
             </div>
        
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_title</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Tiêu Đề</label>
                 <div class="col-sm-10">
-                    <input name="subcategory_title" class="form-control" type="text" value="" placeholder="Nhập subcategory_title"  id="example-text-input">
+                    <input name="subcategory_title" class="form-control" type="text" value="" placeholder="Nhập Tiêu Đề"  id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_area</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">diện tích</label>
                 <div class="col-sm-10">
-                    <input name="subcategory_area" class="form-control" type="text" value="" placeholder="Nhập subcategory_area"  id="example-text-input">
+                    <input name="subcategory_area" class="form-control " type="text" value="" placeholder="Nhập diện tích"  id="example-text-input">
                 </div>
             </div>
              <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_map</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">địa chỉ</label>
                 <div class="col-sm-10">
-                    <input name="subcategory_map" class="form-control" type="text" value="" placeholder="Nhập subcategory_map"  id="example-text-input">
+                    <input name="subcategory_map" class="form-control" type="text" value="" placeholder="Nhập địa chỉ"  id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">subcategory_building</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">số tầng</label>
                 <div class="col-sm-10">
-                    <input name="subcategory_building" class="form-control" type="text" value="" placeholder="Nhập subcategory_building"  id="example-text-input">
+                    <input name="subcategory_building" class="form-control" type="text" value="" placeholder="Nhập số tầng"  id="example-text-input">
                 </div>
             </div>
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">description</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">nội dung</label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="description">
                         {{ $category->description }}
@@ -73,7 +73,7 @@
             </div>
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">category Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="subcategory_images" class="form-control" type="file"  id="image" >
                 </div>
@@ -91,7 +91,7 @@
             <!-- end row -->
 
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light text" value="thêm mới">
             </form>
 
         </div>

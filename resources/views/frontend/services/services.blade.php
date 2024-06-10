@@ -30,7 +30,7 @@
                             </div>
                             <div class="grid-col--9">
                                 <div class="service__box--content">
-                                     <a href="{ route('services.page.detail',str_replace(' ', '-', $item->service_title)) }}"><h4 class="hdg-lv4 txt-capitalize"> <span class="color-primary">{{$item->service_title}}</span></h4></a>
+                                     <a href="{{ route('services.page.detail',str_replace(' ', '-', $item->service_title)) }}"><h4 class="hdg-lv4 txt-capitalize"> <span class="color-primary">{{$item->service_title}}</span></h4></a>
                                     <p>{{$item->service_short}}</p>
                                     <a href="{{ route('services.page.detail',str_replace(' ', '-', $item->service_title)) }}" class="btn btn-info txt-capitalize">xem chi tiết</a>
                                 </div>

@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">add Category</h4>
+            <h4 class="card-title">Thêm</h4>
 
             <form  method="post" action="{{ route('category.page.store') }}" enctype="multipart/form-data" >
                 @csrf
@@ -18,19 +18,19 @@
             <!-- end row -->
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">category Name</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">tên</label>
                 <div class="col-sm-10">
                     <input name="category_name" class="form-control" type="text" value="" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">tag</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">tag</label>
                 <div class="col-sm-10">
                     <input name="hastag" class="form-control" type="text" value="#" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">category Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">hình ảnh</label>
                 <div class="col-sm-10">
                   <input name="category_image" class="form-control" type="file"  id="image" >
                 </div>
@@ -45,7 +45,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light text" value="thêm">
             </form>
 
         </div>

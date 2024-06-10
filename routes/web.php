@@ -15,6 +15,9 @@ use App\Http\Controllers\Backend\DetailCategoryController;
 use App\Http\Controllers\Models\ModelsController;
 use App\Http\Controllers\Service\ServiceController;
 use App\Http\Controllers\Estimate\EstimateController;
+use App\Http\Controllers\Contact\ContactController;
+use App\Http\Controllers\Page\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -180,6 +183,23 @@ Route::controller(EstimateController::class)->group(function(){
 
 });
 
+
+Route::controller(ContactController::class)->group(function(){
+
+    Route::get('/contact', 'ContactPageView')->name('contact.page.contact');
+    Route::post('/add/contact', 'ContactPageMesss')->name('contact.message');
+    Route::get('/contact/finish', 'ContactPageFinish')->name('contact.page.finish');
+
+   
+
+});
+
+Route::controller(PageController::class)->group(function(){
+
+    Route::get('/document', 'DocumentPageView')->name('document.page.document');
+   
+
+});
 
 
 

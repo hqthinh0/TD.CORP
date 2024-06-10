@@ -111,7 +111,7 @@ class SubCategoryController extends Controller
           return redirect()->back()->with($notification);
     }
 
-       public function ConstructionPage(){
+     public function ConstructionPage(){
          $Showconstruction = Subcategory::latest()->get();
          return view('frontend.construction',compact('Showconstruction'));
     }//

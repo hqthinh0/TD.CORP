@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">edit service</h4>
+            <h4 class="card-title text">Chỉnh sửa Dịch vụ</h4>
 
             <form  method="post" action="{{ route('services.page.update') }}" enctype="multipart/form-data" >
                 @csrf
@@ -20,19 +20,19 @@
             
 
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">service_title title</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">tên dịch vụ</label>
                 <div class="col-sm-10">
                     <input name="service_title" class="form-control" type="text" value="{{$EditSerivce->service_title}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">service_short </label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Nội Dung Ngắn</label>
                 <div class="col-sm-10">
                     <input name="service_short" class="form-control" type="text" value="{{$EditSerivce->service_short}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
               <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">description 1</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label text">Nội Dung</label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="service_description">
                       {{$EditSerivce->service_description}}
@@ -41,7 +41,7 @@
             </div>
        
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">models_images Images</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Hình Ảnh</label>
                 <div class="col-sm-10">
                   <input name="service_images" class="form-control" type="file"  id="image" >
                 </div>
@@ -56,7 +56,7 @@
                 </div>
             </div>
             <!-- end row -->
-            <input type="submit" class="btn btn-info waves-effect waves-light" value="Update">
+            <input type="submit" class="btn btn-info waves-effect waves-light" value="Cập Nhật">
             </form>
 
         </div>

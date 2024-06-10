@@ -17,7 +17,7 @@
 
     @foreach($categories as $item)
 
-        <section class="sec-construction" id="{{ $item->hastag }}">
+       <section class="sec-construction" id="{{ $item->hastag }}">
             <div class="wrp-container">
             <h2 class="hdg-lv2"> <span class="color-primary">{{$item->category_name}}</span></h2>
 			<div class="box construction">
@@ -55,3 +55,28 @@
 
 
 @endsection
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Hàm lấy tham số URL
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Lấy tham số 'section' từ URL
+        const section = getUrlParameter('section');
+
+        // Cuộn tới phần tương ứng nếu tham số 'section' tồn tại
+        if (section) {
+            const targetSection = document.getElementById(section);
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    });
+</script>
