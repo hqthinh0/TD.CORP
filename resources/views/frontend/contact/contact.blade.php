@@ -1,4 +1,5 @@
 @extends('frontend.main_master')
+@section('pageTitle', 'Liên Hệ')
 @section('main')
 <div class="wrp-container">
         <div class="breadcrumbs">

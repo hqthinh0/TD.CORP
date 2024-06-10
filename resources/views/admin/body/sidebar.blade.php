@@ -9,6 +9,7 @@
     <li class="nav-item nav-category">Nhập Dữ Liệu</li>
 
     <!-- SLIDER SHOWW START -->
+     <li class="nav-item nav-category">banner</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#slideshow" aria-expanded="false" aria-controls="slideshow">
         <i class="menu-icon mdi mdi-chart-line"></i>
@@ -23,7 +24,7 @@
       </div>
     </li>
 
-
+     <li class="nav-item nav-category">Giới Thiệu</li>
      <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#About" aria-expanded="false"
         aria-controls="About">
@@ -55,11 +56,12 @@
     </li> -->
      <!-- Construction END -->
        <!-- CustomerReview start -->
+    <li class="nav-item nav-category">Đánh Giá</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false"
         aria-controls="form-elements">
         <i class="menu-icon mdi mdi-card-text-outline"></i>
-        <span class="menu-title">Đánh Giá Của Khách Hàng</span>
+        <span class="menu-title">Đánh Giá</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="form-elements">
@@ -72,6 +74,7 @@
    <!-- CustomerReview End -->
 
       <!-- partners start -->
+    <li class="nav-item nav-category">Đối Tác</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#partners" aria-expanded="false"
         aria-controls="partners">
@@ -89,7 +92,7 @@
    <!-- partners End -->
     
    
-
+    <li class="nav-item nav-category">Danh Mục</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#Category" aria-expanded="false"
         aria-controls="Category">
@@ -105,7 +108,7 @@
       </div>
     </li>
 
-
+    <li class="nav-item nav-category">Danh Mục Con</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#subcategory" aria-expanded="false"
         aria-controls="subcategory">
@@ -121,6 +124,7 @@
       </div>
     </li>
 
+    <li class="nav-item nav-category">Nhà Mẫu</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#models" aria-expanded="false"
         aria-controls="models">
@@ -135,7 +139,7 @@
         </ul>
       </div>
     </li>
-
+     <li class="nav-item nav-category">Dịch Vụ</li>
       <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#services" aria-expanded="false"
         aria-controls="services">
@@ -151,7 +155,7 @@
         </ul>
       </div>
     </li>
-
+    <li class="nav-item nav-category">Báo Giá</li>
       <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#estimate" aria-expanded="false"
         aria-controls="estimate">
@@ -207,16 +211,16 @@
         </ul>
       </div>
     </li> -->
-    <li class="nav-item nav-category">pages</li>
+    <li class="nav-item nav-category">Email</li>
     <li class="nav-item">
       <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
         <i class="menu-icon mdi mdi-account-circle-outline"></i>
-        <span class="menu-title">User Pages</span>
+        <span class="menu-title">Email</span>
         <i class="menu-arrow"></i>
       </a>
       <div class="collapse" id="auth">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="../pages/samples/login.html"> Login </a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{route('contact.page.all')}}"> Tất cả Emaill </a></li>
         </ul>
       </div>
     </li>

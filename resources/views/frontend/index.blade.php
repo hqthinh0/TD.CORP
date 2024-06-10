@@ -1,4 +1,5 @@
 @extends('frontend.main_master')
+@section('pageTitle', 'Công Ty TNHH TD.CORP')
 @section('main')
 
 @php

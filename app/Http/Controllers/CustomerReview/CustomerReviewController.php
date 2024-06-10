@@ -14,8 +14,7 @@ class CustomerReviewController extends Controller
     //
 
     public function CustomerReview(){
-           $review = CustomerReview::latest()->get();
-        // $review = CustomerReview::find(1);
+        $review = CustomerReview::find(1);
         return view('admin.home_customerreview.home_customerreview_all', compact('review'));
     }
 

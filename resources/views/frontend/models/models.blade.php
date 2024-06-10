@@ -1,5 +1,6 @@
 
 @extends('frontend.main_master')
+@section('pageTitle', 'Nhà Mẫu')
 @section('main')
 
 @php 

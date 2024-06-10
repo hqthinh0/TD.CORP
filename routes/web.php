@@ -189,6 +189,7 @@ Route::controller(ContactController::class)->group(function(){
     Route::get('/contact', 'ContactPageView')->name('contact.page.contact');
     Route::post('/add/contact', 'ContactPageMesss')->name('contact.message');
     Route::get('/contact/finish', 'ContactPageFinish')->name('contact.page.finish');
+    Route::get('/all/contact', 'ContactPageReviewAll')->name('contact.page.all');
 
    
 

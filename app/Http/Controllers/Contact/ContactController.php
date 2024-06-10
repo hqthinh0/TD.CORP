@@ -53,4 +53,9 @@ class ContactController extends Controller
       //  return view('frontend.contact.contact');
     }
 
+     public function ContactPageReviewAll(){
+        $contact_Email = Contact::all();
+        return view('admin.contact.all_contact',compact('contact_Email'));
+    }
+
 }
