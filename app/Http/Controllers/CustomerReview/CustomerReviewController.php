@@ -37,7 +37,7 @@ class CustomerReviewController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->back()->with($notification);
           }
@@ -87,7 +87,7 @@ class CustomerReviewController extends Controller
         //     'updated_at' => Carbon::now(),
         // ])->save();
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('route.CustomerReview.all')->with($notification);
           }
@@ -101,7 +101,7 @@ class CustomerReviewController extends Controller
          unlink($img);
 
          CustomerReview::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
         return redirect()->back()->with($notification);
     }

@@ -37,7 +37,7 @@ class ConsTrucTionController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->back()->with($notification);
           }

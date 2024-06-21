@@ -31,9 +31,9 @@
                             </div>
                             <div class="grid-col--9">
                                 <div class="service__box--content">
-                                     <a href="{ route('estimate.page.detail',str_replace(' ', '-', $item->estimates_title)) }}"><h4 class="hdg-lv4 txt-capitalize"> <span class="color-primary">{{$item->estimates_title}}</span></h4></a>
+                                     <a href="{{ route('estimate.page.detail',str_replace(' ', '-', $item->estimates_slug)) }}"><h4 class="hdg-lv4 txt-capitalize"> <span class="color-primary">{{$item->estimates_title}}</span></h4></a>
                                     <p>{{$item->estimates_short}}</p>
-                                    <a href="{{ route('estimate.page.detail',str_replace(' ', '-', $item->estimates_title)) }}" class="btn btn-info txt-capitalize">xem chi tiết</a>
+                                    <a href="{{ route('estimate.page.detail',str_replace(' ', '-', $item->estimates_slug)) }}" class="btn btn-info txt-capitalize">xem chi tiết</a>
                                 </div>
                             </div>
                         </div>

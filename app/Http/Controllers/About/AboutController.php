@@ -26,7 +26,7 @@ class AboutController extends Controller
             'created_at' => Carbon::now(),
         ]);
 
-        $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+        $notification = array('message' => 'Đã thêm thông tin',  'alert-type' => 'success'  ); 
 
         return redirect()->back()->with($notification);
     }
@@ -56,7 +56,7 @@ class AboutController extends Controller
             $description->updated_at = Carbon::now();
             $description->save();
 
-            $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+            $notification = array('message' => 'Đã cập nhật thông tin',  'alert-type' => 'success'  ); 
 
             return redirect()->route('about.page.all')->with($notification);
           
@@ -69,7 +69,7 @@ class AboutController extends Controller
          
 
          About::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thông tin',  'alert-type' => 'success'  ); 
 
         return redirect()->back()->with($notification);
     }

@@ -17,8 +17,8 @@
                                         <th>Email</th>
                                         <th>Số Điện Thoại</th>
                                         <th>Nội Dung</th>
-                                        <th>Sửa</th>
-                                        <th>Xoá</th>
+                                        <!-- <th>Sửa</th>
+                                        <th>Xoá</th> -->
                                       </tr>
                                     </thead>
                                     <tbody>
@@ -31,8 +31,8 @@
                                         <td>{{$item->email}}</td>
                                         <td>{{$item->phone}}</td>
                                         <td>{{$item->message}}</td>
-                                        <td> <a href="{{ route('CustomerReview.route.edit',$item->id) }}" class="btn btn-edit"><img src="{{ asset('backend/assets/images/file-icons/128/edit.png')}}" /></a></td>
-                                         <td> <a href="{{ route('CustomerReview.route.delete',$item->id) }}" id="delete" class="btn btn-delete"><img src="{{ asset('backend/assets/images/file-icons/128/bin.png')}}" /></a></td>
+                                        <!-- <td> <a href="{{ route('CustomerReview.route.edit',$item->id) }}" class="btn btn-edit"><img src="{{ asset('backend/assets/images/file-icons/128/edit.png')}}" /></a></td>
+                                         <td> <a href="{{ route('CustomerReview.route.delete',$item->id) }}" id="delete" class="btn btn-delete"><img src="{{ asset('backend/assets/images/file-icons/128/bin.png')}}" /></a></td> -->
                                       </tr>
                                       @endforeach
                                     </tbody>

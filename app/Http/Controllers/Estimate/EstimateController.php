@@ -41,7 +41,7 @@ class EstimateController extends Controller
                     'estimates_images' => $save_url, 
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                 return redirect()->route('estimate.page.all')->with($notification);
             }
@@ -51,7 +51,6 @@ class EstimateController extends Controller
     public function EstimatePageEdit($id){
 
         $EditEstimate = Estimate::findOrFail($id);
-
         return view('backend.estimatepage.edit_estimatepage',compact('EditEstimate'));
     }//end method
 
@@ -82,22 +81,24 @@ class EstimateController extends Controller
                 $estimate->save();
 
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
                  return redirect()->route('estimate.page.all')->with($notification);
           }
 
     }//end method
 
-    public function EstimatePageDelete($id){
-         $Deleteconent = Estimate::findOrFail($id);
-         $img = $Deleteconent->estimates_images;
-         unlink($img);
 
-            Service::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
 
-          return redirect()->route('esstimate.page.all')->with($notification);
+      public function EstimatePageDelete($id){
+
+         Estimate::findOrFail($id)->delete();
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
+
+        return redirect()->back()->with($notification);
     }
+
+
+
 
 
     public function EstimatePageShow(){
@@ -107,8 +108,7 @@ class EstimateController extends Controller
 
     public function EstimatePageDetail($name){
       $name = str_replace('-', ' ', $name);
-      $ShowEstimateDetaild = Service::where('estimates_title', $name)->firstOrFail();
+      $ShowEstimateDetaild = Estimate::where('estimates_title', $name)->firstOrFail();
       return view('frontend.estimate.detail',compact('ShowEstimateDetaild'));
     }
-
 }

@@ -49,7 +49,7 @@ class SubCategoryController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('subcategory.page.all')->with($notification);
             }
@@ -95,7 +95,7 @@ class SubCategoryController extends Controller
                 $subcategory->save();
 
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('subcategory.page.all')->with($notification);
          }
@@ -106,7 +106,7 @@ class SubCategoryController extends Controller
      public function SubCategoryPageDelete($id){
  
          Subcategory::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
           return redirect()->back()->with($notification);
     }

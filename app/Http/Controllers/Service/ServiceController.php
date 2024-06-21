@@ -44,7 +44,7 @@ class ServiceController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('services.page.all')->with($notification);
             }
@@ -85,7 +85,7 @@ class ServiceController extends Controller
                 $services->save();
 
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
                  return redirect()->route('services.page.all')->with($notification);
           }
 
@@ -97,7 +97,7 @@ class ServiceController extends Controller
          unlink($img);
 
             Service::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
           return redirect()->route('services.page.all')->with($notification);
     }

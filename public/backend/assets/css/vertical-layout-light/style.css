@@ -13920,6 +13920,8 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
   z-index: var(--bs-toast-zindex);
   width: max-content;
   max-width: 100%;
+  background :#000;
+  color: #fff;
   pointer-events: none;
 }
 .toast-container > :not(:last-child) {
@@ -13946,6 +13948,13 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
   padding: var(--bs-toast-padding-x);
   word-wrap: break-word;
 }
+
+.toast-success{
+  background-color: green;
+  opacity: 1;
+}
+.toast-message{
+color:#fff}
 
 .modal {
   --bs-modal-zindex: 1055;
@@ -15339,7 +15348,7 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
 
 .text-bg-success {
   color: #000 !important;
-  background-color: RGBA(var(--bs-success-rgb), var(--bs-bg-opacity, 1)) !important;
+  background-color: #000 !important;
 }
 
 .text-bg-info {
@@ -16985,7 +16994,7 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
 
 .text-black {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important;
+  color: #fff !important;
 }
 
 .text-white {
@@ -29332,7 +29341,7 @@ div.tagsinput span.tag a {
   color: #ffffff;
 }
 .navbar .navbar-menu-wrapper {
-  background: #F4F5F7;
+  background: #162740;
   transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;
   -moz-transition: width 0.25s ease;
@@ -29595,7 +29604,7 @@ div.tagsinput span.tag a {
   font-weight: normal;
   font-size: 28px;
   line-height: 38px;
-  color: #8D8D8D;
+  color: #FF7D29;
   margin-bottom: 10px;
 }
 .navbar .navbar-menu-wrapper .navbar-nav .nav-item .welcome-text .text-dark {

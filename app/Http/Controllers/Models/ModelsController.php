@@ -43,7 +43,7 @@ class ModelsController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('models.page.all')->with($notification);
             }
@@ -83,7 +83,7 @@ class ModelsController extends Controller
                 $models->save();
 
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
                  return redirect()->route('models.page.all')->with($notification);
           }
 
@@ -95,7 +95,7 @@ class ModelsController extends Controller
          unlink($img);
 
             Models::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
           return redirect()->route('models.page.all')->with($notification);
     }

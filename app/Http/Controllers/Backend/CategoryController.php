@@ -43,7 +43,7 @@ class CategoryController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('category.page.all')->with($notification);
           }
@@ -82,7 +82,7 @@ class CategoryController extends Controller
                 $category->save();
 
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
                  return redirect()->route('category.page.all')->with($notification);
           }
 
@@ -94,7 +94,7 @@ class CategoryController extends Controller
          unlink($img);
 
          Category::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
           return redirect()->route('category.page.all')->with($notification);
     }

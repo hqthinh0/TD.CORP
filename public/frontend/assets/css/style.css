@@ -4754,6 +4754,11 @@ section + section {
 .feedback .box__info--images {
   border-radius: 50%;
 }
+.feedback .box__info--images img{
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
 .feedback .box__info--content {
   font-weight: bold;
   font-size: 1.4rem;

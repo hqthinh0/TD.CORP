@@ -32,7 +32,7 @@ class PartnerController extends Controller
             ]);
         } // end foreach
 
-            $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+            $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                 return redirect()->back()->with($notification);
        
@@ -74,7 +74,7 @@ class PartnerController extends Controller
         //     'updated_at' => Carbon::now(),
         // ])->save();
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('partner.route.all')->with($notification);
           }
@@ -87,7 +87,7 @@ class PartnerController extends Controller
          unlink($img);
 
          partner::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
         return redirect()->back()->with($notification);
     }

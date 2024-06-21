@@ -33,7 +33,7 @@ class ContactController extends Controller
                     'created_at' => Carbon::now(),
                     
                 ]);
-        $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+        $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                return redirect()->route('contact.page.finish')->with($notification);
     }

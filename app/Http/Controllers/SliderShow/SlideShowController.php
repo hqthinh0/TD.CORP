@@ -41,7 +41,7 @@ class SlideShowController extends Controller
                 ]);
                 } // end foreach
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->back()->with($notification);
        
@@ -87,7 +87,7 @@ class SlideShowController extends Controller
         //     'updated_at' => Carbon::now(),
         // ])->save();
 
-                $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã cập nhật thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('slideshow.route.all')->with($notification);
           }
@@ -101,7 +101,7 @@ class SlideShowController extends Controller
          unlink($img);
 
          SliderShow::findOrFail($id)->delete();
-          $notification = array('message' => 'Đã cập nhật hình ảnh slider thành công',  'alert-type' => 'success'  ); 
+          $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
 
         return redirect()->back()->with($notification);
     }

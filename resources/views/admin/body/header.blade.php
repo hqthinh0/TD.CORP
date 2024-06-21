@@ -30,13 +30,14 @@
     <ul class="navbar-nav ms-auto">
 
       <li class="nav-item dropdown d-none d-lg-block user-dropdown">
+      
         <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
           <img class="img-xs rounded-circle" src="{{ (!empty($adminData->profile_image)) ? url('img/admin_image/'.$adminData->profile_image):url('img/user.png')}}" alt="Profile image" />
          </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
           <div class="dropdown-header text-center">
           
-            <p class="mb-1 mt-3 font-weight-semibold text">{{$adminData->name}}</p>
+             <img class="img-xs rounded-circle" src="{{ (!empty($adminData->profile_image)) ? url('img/admin_image/'.$adminData->profile_image):url('img/user.png')}}" alt="Profile image" /><p class="mb-1 mt-3 font-weight-semibold text">{{$adminData->name}}</p>
             <p class="fw-light text-muted mb-0">{{$adminData->email}}</p>
           </div>
              <a class="dropdown-item" href="{{ route('admin.profile') }}"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My

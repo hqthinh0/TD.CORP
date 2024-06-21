@@ -18,32 +18,34 @@
             <!-- end row -->
             <input type="hidden" type="text" name="id" value="{{$EditEstimate->id}}">
             
+            
 
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Tên</label>
                 <div class="col-sm-10">
-                    <input name="estimates_title" class="form-control" type="text" value="{{$EditEstimate->service_title}}" placeholder="nhập nội dung" id="example-text-input">
+                    <input name="estimates_title" class="form-control" type="text" value="{{$EditEstimate->estimates_title}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Nội Dung Ngắn</label>
                 <div class="col-sm-10">
-                    <input name="estimates_short" class="form-control" type="text" value="{{$EditEstimate->service_short}}" placeholder="nhập nội dung" id="example-text-input">
+                    <input name="estimates_short" class="form-control" type="text" value="{{$EditEstimate->estimates_short}}" placeholder="nhập nội dung" id="example-text-input">
                 </div>
             </div>
               <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                 <div class="col-sm-10">
                    <textarea id="elm1" name="estimates_description">
-                      {{$EditEstimate->service_description}}
+                      {{$EditEstimate->estimates_description}}
                     </textarea>
                 </div>
             </div>
-       
+
+
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label text">hình ảnh</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Hình Ảnh</label>
                 <div class="col-sm-10">
-                  <input name="service_images" class="form-control" type="file"  id="image" >
+                  <input name="estimates_images" class="form-control" type="file"  id="image" >
                 </div>
             </div>
             <!-- end row -->
@@ -55,7 +57,9 @@
                     <!-- <img id="showImage" style="width: 100px; height:100px" class="rounded avatar-lg" src="{{ asset('backend/assets/images/small/img-5.jpg') }}" alt="Card image cap"> -->
                 </div>
             </div>
-            <!-- end row -->
+       
+            
+     
             <input type="submit" class="btn btn-info waves-effect waves-light text" value="Cập nhật">
             </form>
 
