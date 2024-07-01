@@ -9,14 +9,13 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title text">Chỉnh sửa Dịch vụ</h4>
+              <h4 class="card-title text">Chỉnh sửa bài viết <span class="text-noti">vui lòng nhập đầy đủ thông tin trước khi cập nhật bài viết</span></h4>
 
             <form  method="post" action="{{ route('services.page.update') }}" enctype="multipart/form-data" >
                 @csrf
-
-            
             <!-- end row -->
             <input type="hidden" type="text" name="id" value="{{$EditSerivce->id}}">
+             <input type="hidden" name="current_image" value="{{$EditSerivce->service_images}}">
             
 
             <div class="row mb-3">
@@ -43,7 +42,12 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Hình Ảnh</label>
                 <div class="col-sm-10">
-                  <input name="service_images" class="form-control" type="file"  id="image" >
+                    <div class="input-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="image" name="service_images">
+                            <label class="custom-file-label" for="image">{{ basename($EditSerivce->service_images) }}</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- end row -->
@@ -64,21 +68,23 @@
 </div> <!-- end col -->
 </div>
 
-
-
 </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
-    
     $(document).ready(function(){
         $('#image').change(function(e){
             var reader = new FileReader();
             reader.onload = function(e){
-                $('#showImage').attr('src',e.target.result);
+                $('#showImage').attr('src', e.target.result);
             }
             reader.readAsDataURL(e.target.files['0']);
         });
+
+        // Load the current image when the page loads
+        var currentImage = $('input[name="current_image"]').val();
+        if (currentImage) {
+            $('#showImage').attr('src', currentImage);
+        }
     });
-</script>
 @endsection

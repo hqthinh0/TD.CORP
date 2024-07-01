@@ -13956,6 +13956,13 @@ textarea.is-invalid.tt-hint, .select2-container--default .select2-selection--sin
 .toast-message{
 color:#fff}
 
+.text-noti{
+  color: red;
+  font-size: 12px;
+    padding-left: 6rem;
+  box-sizing: border-box;
+}
+
 .modal {
   --bs-modal-zindex: 1055;
   --bs-modal-width: 500px;

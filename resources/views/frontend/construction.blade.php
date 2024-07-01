@@ -29,9 +29,12 @@
 						<div class="box-category">
 								<a href="{{ route('construction.page.detail',str_replace(' ', '-', $subItem->subcategory_title)) }}" class="box-category__href">
 								<div class="box-category__img">
-									<figure class="box-image">
-										<img src="{{$subItem->subcategory_images}}" alt="" >
-									</figure>
+								       <figure class="box-image">
+                                            @php
+                                                $image_url = str_replace($item->hastag, '', $subItem->subcategory_images);
+                                            @endphp
+                                            <img src="{{ asset($image_url) }}" alt="" class="fluid-image">
+                                        </figure>
 								</div>
 								<h3 class="hdg-lv3 hdg-lv3--small txt-capitalize"> <span class="color-primary">{{  $subItem->subcategory_title }}</span></h3>
 							</a>
@@ -48,35 +51,29 @@
 			    </div>
 		    </div>
         </section>
-
-    
-
     @endforeach
-
-
 
 @endsection
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        // Hàm lấy tham số URL
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+    window.addEventListener('load', function () {
+        // Hàm lấy phần hash từ URL
+        function getHashParameter() {
+            return window.location.hash ? window.location.hash.substring(1) : null;
         }
 
-        // Lấy tham số 'section' từ URL
-        const section = getUrlParameter('section');
+        // Lấy giá trị hash từ URL
+        const section = getHashParameter();
 
-        // Cuộn tới phần tương ứng nếu tham số 'section' tồn tại
+        // Cuộn tới phần tương ứng nếu hash tồn tại
         if (section) {
             const targetSection = document.getElementById(section);
             if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
+                targetSection.scrollIntoView({
                     behavior: 'smooth'
                 });
+                
+                // Cuộn lên thêm 110px
+                $("html, body").animate({ scrollTop: $(location.hash).offset().top - 110 }, 1500);
             }
         }
     });

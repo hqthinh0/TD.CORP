@@ -44,7 +44,7 @@ class ServiceController extends Controller
                      
                 ]);
 
-                $notification = array('message' => 'Đã xoá thành công',  'alert-type' => 'success'  ); 
+                $notification = array('message' => 'Đã thêm thành công',  'alert-type' => 'success'  ); 
 
                  return redirect()->route('services.page.all')->with($notification);
             }
@@ -70,7 +70,6 @@ class ServiceController extends Controller
 
                 $img->toJpeg()->save(base_path('public/img/service/'.$name_gen));
                 $save_url = "img/service/".$name_gen;
-
 
 
                 $services = Service::findOrFail($updateImages);

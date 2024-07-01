@@ -12,4 +12,9 @@ class PageController extends Controller
           return view('backend.document.documentation');
       //  return view('frontend.contact.contact');
     }
+
+     public function ErrorPageView(){
+          return view('frontend.document.404');
+      //  return view('frontend.contact.contact');
+    }
 }

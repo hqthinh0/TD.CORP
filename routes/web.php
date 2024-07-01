@@ -198,6 +198,7 @@ Route::controller(ContactController::class)->group(function(){
 Route::controller(PageController::class)->group(function(){
 
     Route::get('/document', 'DocumentPageView')->name('document.page.document');
+    Route::get('/404', 'ErrorPageView')->name('error.page.error');
    
 
 });

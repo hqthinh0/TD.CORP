@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title text">thêm bài viết</h4>
+            <h4 class="card-title text">Chỉnh sửa bài viết <span class="text-noti">vui lòng nhập đầy đủ thông tin trước khi cập nhật bài viết</span></h4>
 
             <form  method="post" action="{{ route('models.page.update') }}" enctype="multipart/form-data" >
                 @csrf

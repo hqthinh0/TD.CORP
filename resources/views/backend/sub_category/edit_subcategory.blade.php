@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title text">Chỉnh sửa Bài viết</h4>
+             <h4 class="card-title text">Chỉnh sửa bài viết <span class="text-noti">vui lòng nhập đầy đủ thông tin trước khi cập nhật bài viết</span></h4>
 
             <form  method="post" action="{{ route('subcategory.page.update') }}" enctype="multipart/form-data" >
                 @csrf
@@ -75,7 +75,7 @@
        
            
             <div class="row mb-3">
-                <label for="example-text-input" class="col-sm-2 col-form-label">Chỉnh sửa hình ảnh</label>
+                <label for="example-text-input" class="col-sm-2 col-form-label">Chỉnh sửa hình ảnh *</label>
                 <div class="col-sm-10">
                   <input name="subcategory_images" class="form-control" type="file"  id="image" >
                 </div>

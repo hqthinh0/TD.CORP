@@ -40,13 +40,13 @@ class ContactController extends Controller
 
     public function ContactPageFinish(){
 
-        $title = 'Welcome to the laracoding.com example email';
-        $body = 'Thank you for participating!';
+        $title = 'TD.CORD thông báo';
+        $body = 'Cảm ơn bạn rất nhiều vì đã liên hệ với chúng tôi. Chúng tôi sẽ liên hệ với bạn ngay khi chúng tôi xác nhận thông tin chi tiết. Nếu bạn vội, chúng tôi cũng nhận tư vấn qua điện thoại. Xin vui lòng liên hệ với chúng tôi theo số 052-757-3255.';
 
 
         Mail::to('hqthinh0@gmail.com')->send(new WelcomeMail([
-            'title' => 'The Title',
-            'body' => 'The Body',
+            'title' =>  $title,
+            'body' =>  $body,
         ]));
         // Mail::to('hqthinh0@gmail.com')->send(new ($title, $body));
           return view('frontend.contact.finish');

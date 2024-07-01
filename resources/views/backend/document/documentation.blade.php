@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Star Admin2 Dashboard</title>
+    <title>Documentation</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="{{ asset('backend/assets/vendors/feather/feather.css')}}">
     <link rel="stylesheet" href="{{ asset('backend/assets/vendors/mdi/css/materialdesignicons.min.css')}}">
@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="{{ asset('backend/assets/vendors/pwstabs/jquery.pwstabs.min.css')}}">
     <!-- End plugin css for this page -->
     <!-- inject:css -->
+    <!-- <link rel="stylesheet" href="{{ asset('frontend/assets/css/style.css')}}"> -->
     <link rel="stylesheet" href="{{ asset('backend/assets/css/vertical-layout-light/style.css')}}">
+
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('backend/assets/images/favicon.png')}}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/6.65.7/codemirror.min.js" integrity="sha512-8RnEqURPUc5aqFEN04aQEiPlSAdE0jlFS/9iGgUyNtwFnSKCXhmB6ZTNl7LnDtDWKabJIASzXrzD0K+LYexU9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -36,30 +38,33 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12 doc-header">
-                                <a class="btn btn-success btn-sm" href="../template/index.html"><i class="mdi mdi-home me-2"></i>Back to home</a>
-                                <h3 class="text-primary mt-4">Documentation</h3>
+                                <a class="btn btn-success btn-sm" href="/dashboard"><i class="mdi mdi-home me-2"></i>quay lại</a>
+                                <h3 class="text-primary mt-4">Tài Liệu</h3>
                             </div>
                         </div>
                         <div class="row doc-content">
                             <div class="col-12 col-md-3 grid-margin doc-table-contents">
                                 <div class="card card_document">
                                     <div class="card-body">
-                                        <h3 class="mb-4">Table of contents</h3>
+                                        <h3 class="mb-4">Nội dung chỉnh sửa</h3>
                                         <ul class="list-arrow">
                                             <li>
-                                                <a href="#doc-intro">Introduction</a>
+                                                <a href="#doc-intro">Lời nói đầu</a>
                                             </li>
-                                            <li>
+                                            <!-- <li>
                                                 <a href="#doc-started">Getting started</a>
                                             </li>
                                             <li>
                                                 <a href="#doc-structure">Basic structure</a>
-                                            </li>
+                                            </li> -->
                                             <li>
-                                                <a href="#doc-components">Components</a>
+                                                <a href="#doc-components">Các thẻ Components</a>
                                                 <ul class="list-arrow">
                                                     <li>
-                                                        <a href="#doc-basic-ui">Basic UI Elements</a>
+                                                        <a href="#doc-basic-ui">Button</a>
+                                                    </li>
+                                                     <li>
+                                                        <a href="#doc-h2">các thẻ h2</a>
                                                     </li>
                                                     <li>
                                                         <a href="#doc-tables">Tables</a>
@@ -86,15 +91,34 @@
                                 <div class="col-12 grid-margin" id="doc-intro">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h3 class="mb-4">Introduction</h3>
-                                            <p>Star Admin2 is a responsive HTML template that is based on the CSS framework Bootstrap 5 and it is built with Sass. Sass compiler makes it easier to code and customize. If you are unfamiliar with Bootstrap or Sass, visit their website and read through the documentation. All of Bootstrap components have been modified to fit the style of Star Admin2 and provide a consistent look throughout the template.</p>
-                                            <p>Before you start working with the template, we suggest you go through the pages that are bundled with the theme. Most of the template example pages contain quick tips on how to create or use a component which can be really helpful when you need to create something on the fly.</p>
-                                            <p class="d-inline"><strong>Note</strong>: We are trying our best to document how to use the template. If you think that something is missing from the documentation, please do not hesitate to tell us about it. If you have any questions or issues regarding this theme please use Envato support form on our profile or email us at <a class="d-inline text-info" href="mailto:support@bootstrapdash.com">support@bootstrapdash.com</a>
-                                            </p>
+                                            <h3 class="mb-4">Lời nói đầu</h3>
+                                            <p>Trang tài liệu này dùng để Hướng dẫn đăng các bài viết về các bài danh mục con. Bao gồm các thẻ h2, h3, hình ảnh. Hướng dẫn làm một cách nhanh chóng và chính xác nhất. để bài viết được đẹp và hiệu quả về SEO nhất. vui lòng kiểm tra và viết theo cấu trúc này </p>
+                                                  <textarea class="shell-mode">
+                                                Pages/ 
+                                                  ├── H2/ 
+                                                     ├── a/ 
+                                                     ├── p/ 
+                                                     ├── span/ 
+                                                     ├── Img/ 
+                                                  ├── H3/ 
+                                                    ├── a/ 
+                                                     ├── p/ 
+                                                     ├── span/ 
+                                                     ├── Img/ 
+                                                  ├── H4/ 
+                                                     ├── a/ 
+                                                     ├── p/ 
+                                                     ├── span/ 
+                                                     ├── Img/ 
+                                                     </textarea>
+                                            <p>Cách viết này giúp site của bạn sẽ SEO tốt nhất theo google lúc ấy trang bạn sẽ lên nhanh top hơn. tuỳ vào cấu trúc có thể là h2, h3 rồi các thẻ a, p, span, img </p>
+                                                 <p>nếu bạn cần thay đổi gì hãy liên hệ với tôi để tôi có thể thêm code vào cho bạn hoặc có sự thay đổi gì đó.</p>
+                                            
+                                           
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 grid-margin" id="doc-started">
+                                <!-- <div class="col-12 grid-margin" id="doc-started">
                                     <div class="card ">
                                         <div class="card-body">
                                             <h3 class="mb-4">Getting started</h3>
@@ -150,137 +174,37 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-12 grid-margin" id="doc-components">
                                     <div class="card">
                                         <div class="card-body">
                                             <!-- New Docs Starts Here -->
-                                            <h3 class="my-4">Components</h3>
+                                            <h3 class="my-4">Các Thẻ Components</h3>
                                             <hr class="hr" id="doc-basic-ui">
-                                            <h4 class="my-4">Basic UI Elements</h4>
+                                            <!-- <h4 class="my-4">Basic UI Elements</h4> -->
                                             <div class="demo-tabs">
                                                 <!-- Tabs Starts -->
                                                 <div data-pws-tab="Button" data-pws-tab-name="Button">
-                                                    <h5 class="mb-2 mt-4">Button with the single color</h5>
+                                                    <h5 class="mb-2 mt-4">Nút button</h5>
                                                     <div class="fluid-container py-4">
-                                                        <button type="button" class="btn btn-primary">Primary</button>
-                                                        <button type="button" class="btn btn-secondary">Secondary</button>
-                                                        <button type="button" class="btn btn-success">Success</button>
-                                                        <button type="button" class="btn btn-info">Info</button>
-                                                        <button type="button" class="btn btn-warning">Warning</button>
-                                                        <button type="button" class="btn btn-danger">Danger</button>
+                                                        <a href="#" class="btn btn-info txt-capitalize">xem chi tiết</a>
                                                     </div>
                                                     <textarea class="multiple-codes">
-                                                        <div class="row">
-                                                            <button type="button" class="btn btn-primary">Primary</button>
-                                                            <button type="button" class="btn btn-secondary">Secondary</button>
-                                                            <button type="button" class="btn btn-success">Success</button>
-                                                            <button type="button" class="btn btn-info">Info</button>
-                                                            <button type="button" class="btn btn-warning">Warning</button>
-                                                            <button type="button" class="btn btn-danger">Danger</button>
-                                                        </div>
-                                                    </textarea>
-                                                    <h5 class="mb-2 mt-4">Outlined</h5>
-                                                    <div class="fluid-container py-4">
-                                                        <button type="button" class="btn btn-outline-primary">Primary</button>
-                                                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                                        <button type="button" class="btn btn-outline-success">Success</button>
-                                                        <button type="button" class="btn btn-outline-info">Info</button>
-                                                        <button type="button" class="btn btn-outline-warning">Warning</button>
-                                                        <button type="button" class="btn btn-outline-danger">Danger</button>
-                                                    </div>
-                                                    <textarea class="multiple-codes">
-                                                        <div class="row">
-                                                            <button type="button" class="btn btn-outline-primary">Primary</button>
-                                                            <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                                            <button type="button" class="btn btn-outline-success">Success</button>
-                                                            <button type="button" class="btn btn-outline-info">Info</button>
-                                                            <button type="button" class="btn btn-outline-warning">Warning</button>
-                                                            <button type="button" class="btn btn-outline-danger">Danger</button>
-                                                        </div>
-                                                    </textarea>
-                                                    <h5 class="mb-2 mt-4">Sizes</h5>
-                                                    <div class="fluid-container py-4">
-                                                        <button type="button" class="btn btn-primary btn-lg">Large</button>
-                                                        <button type="button" class="btn btn-primary">Medium</button>
-                                                        <button type="button" class="btn btn-primary btn-sm">Small</button>
-                                                    </div>
-                                                    <textarea class="multiple-codes">
-                                                        <div class="row">
-                                                            <button type="button" class="btn btn-primary btn-lg">Small</button>
-                                                            <button type="button" class="btn btn-secondary">Medium</button>
-                                                            <button type="button" class="btn btn-success btn-sm">Large</button>
-                                                        </div>
+                                                          <a href="#" class="btn btn-info txt-capitalize">xem chi tiết</a>
                                                     </textarea>
                                                 </div>
                                                 <!-- Tabs Ends -->
                                                 <!-- Tabs Starts -->
-                                                <div data-pws-tab="Dropdown" data-pws-tab-name="Dropdown">
-                                                    <h5 class="mb-2 mt-4">Bootstrap Dropdown</h5>
+                                                   <hr class="hr" id="doc-h2">
+                                                <div data-pws-tab="doc-h2" data-pws-tab-name="doc-h2">
+                                                    <h5 class="mb-2 mt-4">các thẻ h2</h5>
                                                     <div class="fluid-container py-4">
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Action
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Separated link</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Action
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Separated link</a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Action
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Separated link</a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Action
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Separated link</a>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="btn-group">
-                                                            <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                Action
-                                                            </button>
-                                                            <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="#">Action</a>
-                                                                <a class="dropdown-item" href="#">Another action</a>
-                                                                <a class="dropdown-item" href="#">Something else here</a>
-                                                                <div class="dropdown-divider"></div>
-                                                                <a class="dropdown-item" href="#">Separated link</a>
-                                                            </div>
-                                                        </div>
+                                                        
+                                                    <h2 class="hdg-lv2 hdg-lv2--center"> <span class="color-primary">hdg-lv2 </span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
+                                                    <h2 class="hdg-lv2 hdg-lv2--center"> <span class="color-seconds">hdg-lv2 </span></h2>
+                                                    <h2 class="hdg-lv2"><span class="color-primary">hdg-lv2 </span><img src="{{ asset('frontend/assets/images/line_h2.png')}}" /></h2>
+                                                    <h2 class="hdg-lv2"> <span class="color-primary">hdg-lv2 </span></h2>
+                                                        
                                                     </div>
                                                     <textarea class="multiple-codes">
                                                         <div class="btn-group">
@@ -984,7 +908,7 @@
     <script src="{{ asset('backend/assets/js/codeEditor.js')}}"></script>
     <script src="{{ asset('backend/assets/js/tabs.js')}}"></script>
     <script src="{{ asset('backend/assets/js/tooltips.js')}}"></script>
-    <!-- <script src="{{ asset('backend/assets/js/documentation.js')}}"></script> -->
+    <script src="{{ asset('backend/assets/js/documentation.js')}}"></script>
     <!-- End custom js for this page-->
 </body>
 

@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Thêm Mẫu</h4>
+            <h4 class="card-title text">Thêm bài viết <span class="text-noti">vui lòng nhập đầy đủ thông tin trước khi thêm bài viết</span></h4>
 
             <form  method="post" action="{{ route('models.page.store') }}" enctype="multipart/form-data" >
                 @csrf

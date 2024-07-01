@@ -35,7 +35,7 @@ class WelcomeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "test mail",
+            subject: "TD.CORD Email phản hồi",
         );
     }
 

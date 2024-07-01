@@ -33,11 +33,11 @@
 				<div class="footer--policy">
 					<h3 class="hdg-lv3"> <span class="color-primary">Thông tin liên hệ</span></h3>
 					<ul class="lst-link">
-						<li><a href="★★★">Điều khoản chung</a></li>
-						<li><a href="★★★">Chính sách bảo mật</a></li>
-						<li><a href="★★★">Hợp đồng tham khảo</a></li>
-						<li><a href="★★★">Tư Vấn Kỹ Thuật</a></li>
-						<li><a href="★★★">bảo hành - khuyến mãi</a></li>
+						<li><a href="{{ route('error.page.error') }}">Điều khoản chung</a></li>
+						<li><a href="{{ route('error.page.error') }}">Chính sách bảo mật</a></li>
+						<li><a href="{{ route('error.page.error') }}">Hợp đồng tham khảo</a></li>
+						<li><a href="{{ route('error.page.error') }}">Tư Vấn Kỹ Thuật</a></li>
+						<li><a href="{{ route('error.page.error') }}">bảo hành - khuyến mãi</a></li>
 					</ul>
 				</div>
 			</div>

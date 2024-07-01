@@ -44,7 +44,7 @@
 					@foreach($category as $item)
 						<div class="grid-col--3 js-animation slideInUp" data-delay="0.2">
 							<div class="box-category">
-								  <a href="{{ url('construction?section=' . $item->hastag) }}" class="box-category__href">
+								  <a href="{{ url('construction/#'.$item->hastag) }}" class="box-category__href">
 									<div class="box-category__img">
 										<figure class="box-image">
 											<img src="{{ asset($item->category_image) }}" alt="" class="fluid-image" >

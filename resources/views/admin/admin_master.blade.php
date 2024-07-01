@@ -71,8 +71,8 @@
   <script src="{{ asset('backend/assets/js/proBanner.js')}}"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="{{asset('backend/assets/js/code.js')}}"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="{{asset('backend/assets/js/code.js')}}"> </script>
 
 <script>
  @if(Session::has('message'))
@@ -96,6 +96,8 @@
   <script src="{{ asset('backend/assets/libs/tinymce/tinymce.min.js') }} "></script>
           <!-- init js -->
   <script src="{{ asset('backend/assets/js/pages/form-editor.init.js') }} "></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <!-- <script src="../../assets/js/Chart.roundedBarCharts.js"></script> -->
   <!-- End custom js for this page-->
 </body>
