@@ -162,7 +162,7 @@
 							</div>
 							<div class="box__info--content">
 								<p class="box__info--name">{{$item->name}}</p>
-								<p class="box__info--adress">T{{$item->address}}</p>
+								<p class="box__info--adress">{{$item->address}}</p>
 							</div>
 						</div>
 					</div>
